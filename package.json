@@ -2,10 +2,45 @@
   "name": "thebibleMeteor",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent"
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
-    "meteor-node-stubs": "~0.2.4"
+    "meteor-node-stubs": "~0.2.4",
+    "react": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-dom": "^15.4.2",
+    "react-router": "^2.0.1",
+    "react-router-bootstrap": "^0.23.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-meteor": "^0.3.4",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-meteor": "^4.0.1",
+    "eslint-plugin-react": "^6.10.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true
+    },
+    "plugins": [
+      "meteor"
+    ],
+    "extends": [
+      "airbnb",
+      "plugin:meteor/recommended"
+    ],
+    "settings": {
+      "import/resolver": "meteor"
+    },
+    "rules": {}
   }
 }
