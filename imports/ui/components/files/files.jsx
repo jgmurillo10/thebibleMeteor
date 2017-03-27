@@ -6,16 +6,6 @@ import {FilesMongo} from "../../../api/programs.js";
 import {Link} from 'react-router';
 
 class Files extends Component {
-  constructor(props) {
-        super(props);
-
-        this.state = {
-            files: [],
-            name:'',
-            drive_url: '',
-            _id:''
-        }
-    }
 
   render(){
     return (
@@ -46,7 +36,7 @@ class Files extends Component {
 
             <div className="row">
 
-                    {this.state.files.map(file => {
+                    {this.props.files.map(file => {
                         return <File key={file._id} file={file}/>
                     })}
 
@@ -57,8 +47,8 @@ class Files extends Component {
 }
 // export default Files;
 export default AppContainer = createContainer(({params})=>{
-  console.log(params.fileId);
-  let files = FilesMongo.find({file_id: new Mongo.ObjectID(params.fileId)});
+  console.log(params.courseId);
+  let files = FilesMongo.find({course_id: new Mongo.ObjectID(params.courseId)});
   console.log(files.fetch());
 	return {
 		files:files.fetch()
