@@ -1,1 +1,73 @@
-/* CSS declarations go here */
+
+.margen {
+  margin-top: 40px;
+  padding-top: 40px;
+}
+/*.card{
+  width: 20rem;
+}*/
+
+.row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    padding-bottom: 40px;
+}
+.back{
+
+    display: inline-block;;
+
+}
+.text-center{
+    text-align: center;
+}
+.text-justified{
+    text-align: justify;
+}
+.breadcrumb {
+  font-size: 1.2em;
+}
+#add{
+  font-size: 0.8em;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-group{
+    padding: 0.9em;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

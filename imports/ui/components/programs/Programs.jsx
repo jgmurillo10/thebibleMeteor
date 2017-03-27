@@ -3,7 +3,8 @@ import Program from "./Program";
 // import {Link} from 'react-router';
 import {Meteor} from "meteor/meteor";
 import {createContainer} from "meteor/react-meteor-data";
-import {ProgramsMongo} from "../../api/programs.js";
+import {ProgramsMongo} from "../../../api/programs.js";
+import {Link} from 'react-router';
 // const ROOT_URL = "http://localhost:3000/api";
 
 class Programs extends Component {
@@ -24,13 +25,12 @@ class Programs extends Component {
                   </ol>
                 </div>
               </div>
-                {/* <Link className="btn" to={'/programs/add' }>
+                <Link className="btn" to={'/programs/add' }>
                   <i className="fa fa-plus fa-2x btn">
                     <span id="add">Add Program</span>
                   </i>
-                </Link> */}
+                </Link>
                 <div className="row">
-                  {console.log(this.props.programs)}
                     {this.props.programs.map(program => {
                         return <Program key={program._id} program={program}/>
                     })}
@@ -48,7 +48,6 @@ Programs.propTypes = {
 
 export default AppContainer = createContainer(()=>{
 	let programs = ProgramsMongo.find({});
-  console.log(programs.fetch());
 	return {
 		programs:programs.fetch()
 	};

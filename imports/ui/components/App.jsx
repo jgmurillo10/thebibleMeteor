@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Programs from "./Programs";
+import Programs from "./programs/Programs";
 import {Meteor} from "meteor/meteor";
-
+import Navbarfix from './navbarfix';
 const ROOT_URL = "https://thebibleapp.herokuapp.com/api";
 // const ROOT_URL = "http://localhost:3000/api";
 
@@ -12,14 +12,13 @@ class App extends Component {
         return (
         <div>
           <div className='row'>
-          {/* <Navbarfix/> */}
+          <Navbarfix/>
           </div>
         <div className='row'>
           <div className='col-md-1'>
           </div>
           <div className='col-md-9'>
-            {/* {React.cloneElement(this.props.children, {...this.state})} */}
-            <Programs/>
+            {React.cloneElement(this.props.children, {...this.state})}
           </div>
           <div className='col-md-1'></div>
           </div>

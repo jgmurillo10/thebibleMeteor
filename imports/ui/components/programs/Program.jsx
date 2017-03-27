@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {Meteor} from "meteor/meteor";
 
 // const ROOT_URL = "http://localhost:3000/api";
-// import {Link} from 'react-router';
-// import Courses from './courses';
+import {Link} from 'react-router';
+// import Courses from '../courses/courses';
 
 
 class Program extends Component {
