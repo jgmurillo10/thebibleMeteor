@@ -1,25 +1,13 @@
 import React, {Component, PropTypes} from "react";
 import Program from "./Program";
-// import {Link} from 'react-router';
 import {Meteor} from "meteor/meteor";
 import {createContainer} from "meteor/react-meteor-data";
 import {ProgramsMongo} from "../../../api/programs.js";
 import {Link} from 'react-router';
-// const ROOT_URL = "http://localhost:3000/api";
+
 
 class Programs extends Component {
 
-  constructor(props) {
-        super(props);
-
-        this.state = {
-            programs: [],
-            name: '',
-            description: '',
-            url: '',
-            _id: ''
-        }
-    }
     render() {
         return (
 

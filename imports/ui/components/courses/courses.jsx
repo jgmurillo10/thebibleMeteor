@@ -5,19 +5,21 @@ import {createContainer} from "meteor/react-meteor-data";
 import {CoursesMongo} from "../../../api/programs.js";
 
 class Courses extends Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            courses: [],
-            name: '',
-            description: '',
-            url: '',
-            _id:'',
-            program_id:''
-        }
-    }
-    render() {
+  constructor(props) {
+          super(props);
+
+          this.state = {
+              courses: [],
+              name: '',
+              description: '',
+              url: '',
+              _id:'',
+              program_id:''
+          }
+      }
+
+      render() {
 
         return (
             <div className="container-fluid">
@@ -45,19 +47,20 @@ class Courses extends Component {
               </Link>
 
               <div className="row">
-
-                    {this.state.courses.map(course => {
+              {/* {console.log(this.props.courses)} */}
+                    {this.props.courses.map(course => {
                         return <Course key={course._id} course={course}/>
                     })}
 
               </div>
             </div>
           )
+  }
 }
-}
-
-export default AppContainer = createContainer(()=>{
-	let courses = CoursesMongo.find({});
+// export default Courses;
+export default AppContainer = createContainer(({params})=>{
+  console.log(params.programId);
+  let courses = CoursesMongo.find({program_id: new Mongo.ObjectID(params.programId)});
   console.log(courses.fetch());
 	return {
 		courses:courses.fetch()
