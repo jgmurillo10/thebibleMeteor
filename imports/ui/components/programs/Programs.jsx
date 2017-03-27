@@ -9,6 +9,17 @@ import {Link} from 'react-router';
 
 class Programs extends Component {
 
+  constructor(props) {
+        super(props);
+
+        this.state = {
+            programs: [],
+            name: '',
+            description: '',
+            url: '',
+            _id: ''
+        }
+    }
     render() {
         return (
 
@@ -40,11 +51,6 @@ class Programs extends Component {
           )
 }
 }
-
-Programs.propTypes = {
-	programs : PropTypes.array.isRequired
-}
-
 
 export default AppContainer = createContainer(()=>{
 	let programs = ProgramsMongo.find({});
