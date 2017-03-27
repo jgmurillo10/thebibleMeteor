@@ -11,8 +11,11 @@ class App extends Component {
 
         return (
         <div>
-          <div className='row'>
-          <Navbarfix/>
+          <div className="row">
+            <div className="col-md-12">
+              <Navbarfix/>
+            </div>
+
           </div>
         <div className='row'>
           <div className='col-md-1'>
