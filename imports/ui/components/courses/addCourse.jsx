@@ -11,7 +11,8 @@ class AddCourse extends Component {
             name: '',
             description: '',
             url: '',
-            code:''
+            code:'',
+
         };
         //  this.addProgram = this.h.bind(this);
     }
@@ -22,12 +23,14 @@ class AddCourse extends Component {
       let description = this.state.description;
       let url = this.state.url;
       let code = this.state.code;
+      let program_id=new Mongo.ObjectID(this.props.params.programId);
 
       CoursesMongo.insert({
         name,
         description,
         url,
-        code
+        code,
+        program_id
       });
 
      alert("Course " + name + " added");
