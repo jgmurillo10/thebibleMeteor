@@ -18,20 +18,20 @@ class App extends Component {
 
   componentWillMount(){
     if (!this.state.isAuthenticated) {
-      browserHistory.push('/home');
+      browserHistory.push('/login');
     }
   }
 
   componentDidUpdate(prevProps, prevState){
     if (!this.state.isAuthenticated) {
-      browserHistory.push('/home');
+      browserHistory.push('/login');
     }
   }
 
   logout(e){
     e.preventDefault();
     Meteor.logout();
-    browserHistory.push('/home');
+    browserHistory.push('/login');
   }
     render() {
 

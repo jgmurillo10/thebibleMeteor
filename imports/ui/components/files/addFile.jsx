@@ -90,7 +90,7 @@ class AddFile extends Component {
 
   render(){
     return (
-      <div>
+      <div className="add">
             <h1>Add file</h1>
             <hr />
             <input className="btn btn-default btn-file form-control" type="file" id="file-input"  onChange={this.initUpload.bind(this)}/>

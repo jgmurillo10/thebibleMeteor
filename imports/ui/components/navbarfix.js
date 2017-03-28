@@ -13,11 +13,15 @@ class Navbarfix extends Component {
   constructor(props){
     super(props);
     this.state={ logout: false};
-    this.login = this.login.bind(this);
+    this.signup = this.signup.bind(this);
     this.logout = this.logout.bind(this);
+    this.login = this.login.bind(this);
+  }
+  signup(){
+    browserHistory.push('/signup');
   }
   login(){
-    this.setState({ logout: true });
+    browserHistory.push('/login');
   }
   logout(e){
     e.preventDefault();
@@ -26,6 +30,9 @@ class Navbarfix extends Component {
 }
   render() {
 
+    let currentUser = this.props.currentUser;
+    let userDataAvailable = (currentUser !== undefined);
+    let loggedIn = (currentUser && userDataAvailable);
       return (
         <div>
           <nav className="navbar navbar-default navbar-fixed-top">
@@ -36,10 +43,18 @@ class Navbarfix extends Component {
             <div className="navbar-collapse">
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <a href="#" onClick={this.logout}>Signup</a>
+                  <h1 className="text-center">{ loggedIn ? 'Welcome '+currentUser.username : '' }</h1>
                 </li>
                 <li>
-                  <a href="#" onClick={this.logout}>Logout</a>
+                  <a href="#" onClick={this.signup}>Signup</a>
+                </li>
+                <li>
+                  <a href="#" onClick={ this.logout}>  Logout</a>
+                </li>
+
+
+                <li>
+                  <a href="#" onClick={ this.login}>  Login</a>
                 </li>
               </ul>
             </div>

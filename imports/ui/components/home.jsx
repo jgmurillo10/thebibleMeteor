@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
 
         return (
-          <div className="container-fluid">
+          <div className="container-fluid add">
           <div className="text-center"><i className="fa fa-fw fa-5x fa-book"></i></div>
         <h1 className="text-center">Welcome</h1>
         <hr />
@@ -20,9 +20,9 @@ class Home extends Component {
           <p>Click Sign in button below to use the web app.</p>
           </div>
           <div className="text-center">
-          <Link className="" to={'/programs' }>
+          <Link className="" to={'/signup' }>
             <i className="fa fa-sign-in fa-2x btn text-center">
-              <span id="add">Sign in</span>
+              <span id="add">Sign up</span>
             </i>
           </Link>
           </div>
