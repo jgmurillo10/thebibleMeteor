@@ -1,12 +1,38 @@
 import React, {Component} from 'react';
+import { browserHistory } from 'react-router';
 import Programs from "./programs/Programs";
 import {Meteor} from "meteor/meteor";
 import Navbarfix from './navbarfix';
 const ROOT_URL = "https://thebibleapp.herokuapp.com/api";
-// const ROOT_URL = "http://localhost:3000/api";
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = this.getMeteorData();
+    this.logout = this.logout.bind(this);
+  }
 
+  getMeteorData(){
+    return { isAuthenticated: Meteor.userId() !== null };
+  }
+
+  componentWillMount(){
+    if (!this.state.isAuthenticated) {
+      browserHistory.push('/home');
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    if (!this.state.isAuthenticated) {
+      browserHistory.push('/home');
+    }
+  }
+
+  logout(e){
+    e.preventDefault();
+    Meteor.logout();
+    browserHistory.push('/home');
+  }
     render() {
 
         return (
