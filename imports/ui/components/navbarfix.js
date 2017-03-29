@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 // import {Nav,Navbar,NavItem} from 'react-bootstrap/lib/';
 import {LinkContainer} from 'react-router-bootstrap';
+import { createContainer } from 'meteor/react-meteor-data';
 import { Link, browserHistory } from 'react-router';
 import { Grid, Form, FormControl, Navbar, Glyphicon,
   Nav, NavItem, Well, Row, Col, Button, NavDropdown, MenuItem } from 'react-bootstrap';
@@ -29,7 +30,6 @@ class Navbarfix extends Component {
     browserHistory.push('/');
 }
   render() {
-
     let currentUser = this.props.currentUser;
     let userDataAvailable = (currentUser !== undefined);
     let loggedIn = (currentUser && userDataAvailable);
@@ -65,4 +65,12 @@ class Navbarfix extends Component {
   }
 
 }
-export default Navbarfix;
+Navbarfix.propTypes = {
+  currentUser: PropTypes.object,
+};
+
+export default createContainer(() => {
+  return {
+    currentUser: Meteor.user()
+  };
+}, Navbarfix);
