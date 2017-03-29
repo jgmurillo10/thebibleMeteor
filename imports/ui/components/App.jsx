@@ -16,17 +16,19 @@ class App extends Component {
     return { isAuthenticated: Meteor.userId() !== null };
   }
 
-  componentWillMount(){
-    if (!this.state.isAuthenticated) {
-      browserHistory.push('/');
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState){
-    if (!this.state.isAuthenticated) {
-      browserHistory.push('/');
-    }
-  }
+  //Esta parte es la que estaba generando el error de Uncaught RangeError: Maximum call stack size exceeded
+  //Tal vez deberían hacer la redirección al login
+  // componentWillMount(){
+  //   if (!this.state.isAuthenticated) {
+  //     browserHistory.push('/');
+  //   }
+  // }
+  //
+  // componentDidUpdate(prevProps, prevState){
+  //   if (!this.state.isAuthenticated) {
+  //     browserHistory.push('/');
+  //   }
+  // }
 
   logout(e){
     e.preventDefault();
@@ -34,7 +36,7 @@ class App extends Component {
     browserHistory.push('/');
   }
     render() {
-
+        //En el navbarfix faltaria pasar el currentUser
         return (
         <div>
           <div className="row">

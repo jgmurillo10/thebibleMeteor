@@ -48,6 +48,7 @@ class Files extends Component {
 // export default Files;
 export default AppContainer = createContainer(({params})=>{
   console.log(params.courseId);
+  //Tal vez aca tambien se les genere error por lo del ID
   let files = FilesMongo.find({course_id: new Mongo.ObjectID(params.courseId)});
   console.log(files.fetch());
 	return {

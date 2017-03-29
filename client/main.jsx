@@ -15,9 +15,14 @@ import SignupPage from '../imports/ui/components/auth/SignupPage';
 
 import App from '../imports/ui/components/App.jsx';
 
+//Hay un error al iniciar la aplicación: Uncaught RangeError: Maximum call stack size exceeded
+//Estaba siendo causado por la redirección que estaba haciendo al evaluar si habia un usuario autenticado
+//en la aplicación con el willMount y DidUpdate
+//En general me parece interesante la aplicación, tal vez el nombre es medio polémico pero bien
+
 Meteor.startup(() => {
   render(
-    <Router history={browserHistory} >
+    <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Home}/>
       {/* <Route path='intro' component={Intro}/> */}

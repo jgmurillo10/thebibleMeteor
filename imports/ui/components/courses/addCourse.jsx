@@ -23,6 +23,8 @@ class AddCourse extends Component {
       let description = this.state.description;
       let url = this.state.url;
       let code = this.state.code;
+      //Aca tambien se genera error por lo del ID, si le ponen solamente
+      //this.props.params.programId funciona
       let program_id=new Mongo.ObjectID(this.props.params.programId);
 
       CoursesMongo.insert({

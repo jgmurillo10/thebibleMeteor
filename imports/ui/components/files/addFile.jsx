@@ -43,6 +43,7 @@ class AddFile extends Component {
   xhr.onreadystatechange = () => {
     if(xhr.readyState === 4){
       if(xhr.status === 200){
+        //JAJAJAJA #cracks
         console.log('entro gonorrea ome gonorrea');
         {/*document.getElementById('preview').src = url;*/}
         //document.getElementById('avatar-url').value = url;

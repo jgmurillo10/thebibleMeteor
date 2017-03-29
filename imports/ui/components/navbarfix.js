@@ -30,6 +30,9 @@ class Navbarfix extends Component {
 }
   render() {
 
+    //Con meteor podrian utilizar Meteor.user() para obtener el usuario actual
+    //Tal vez podrían usar la validación de si hay un usurio actual para solo mostrar el logout 
+    // o el signup y el login y no los tres al tiempo
     let currentUser = this.props.currentUser;
     let userDataAvailable = (currentUser !== undefined);
     let loggedIn = (currentUser && userDataAvailable);

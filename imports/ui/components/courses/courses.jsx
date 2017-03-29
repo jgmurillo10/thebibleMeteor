@@ -60,6 +60,10 @@ class Courses extends Component {
 // export default Courses;
 export default AppContainer = createContainer(({params})=>{
   console.log(params.programId);
+  //Sale un error al intentar ver los cursos por el id del programa que se crea:
+  //Uncaught Error: Invalid hexadecimal string for creating an ObjectID
+  //Esto podría servir http://stackoverflow.com/questions/33222799/meteor-returns-invalid-hexadecimal-string-error-trying-to-create-objectid
+  // dejando program_id: params.programId funciona
   let courses = CoursesMongo.find({program_id: new Mongo.ObjectID(params.programId)});
   console.log(courses.fetch());
 	return {

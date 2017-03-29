@@ -4,3 +4,5 @@ import {Mongo, MongoInternals} from "meteor/mongo";
 export const ProgramsMongo = new Mongo.Collection("programs");
 export const CoursesMongo = new Mongo.Collection("courses");
 export const FilesMongo = new Mongo.Collection("files");
+
+//Podrian centralizar los metodos capaces de modificar las colecciones con Meteor.calls
