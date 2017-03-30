@@ -1,4 +1,6 @@
-
+/*No se si se hayan fijado, pero al meterse a la pagina aparece la barra en la parte de abajo para deslizarse hacia la derecha o izquierda.
+Esto pasa porque hay un componente row que ocupa el ancho de la pantalla, y tiene predeterminado un margen. La correccion la puse por si 
+acaso en donde ya tienen el CSS de .row, sin embargo no es necesario dado que no afecta la usabilidad*/
 .margen {
   margin-top: 40px;
   padding-top: 40px;
@@ -14,6 +16,7 @@
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  margin-right:0;
 }
 
 .card {
