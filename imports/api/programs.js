@@ -7,45 +7,43 @@ export const CoursesMongo = new Mongo.Collection('courses');
 export const FilesMongo = new Mongo.Collection('files');
 
 Meteor.methods({
-  'programs.add'({  name, description, url }) {
-    new SimpleSchema({
-      name: { type: String },
-      description: { type: String },
-      url: { type: String }
-    }).validate({name, description, url });
 
+  'programs.add'({ name, description, url}) {
+    new SimpleSchema({
+      _id:        { type: Mongo.ObjectID},
+      name:       { type: String },
+      description:{ type: String },
+      url:        { type: String },
+    }).validate({ name, description, url });
+    if (!Meteor.user()) {
+      throw new Meteor.Error('not-authorized');
+     }
     ProgramsMongo.insert({
+      _id: new Mongo.ObjectID(),
       name,
       description,
-      url
+      url,
     });
   },
 
-  'courses.add'({  name, description, url, code, program_id }) {
+  'courses.add'({ name, description, url, code, program_id }) {
     // var _id = new Mongo.ObjectID;
     new SimpleSchema({
-      _id:{ type: Mongo.ObjectID },
+      _id:{ type: Mongo.ObjectID() },
       name: { type: String },
       description: { type: String },
       url: { type: String },
       code: { type: String },
       program_id: { type: Mongo.ObjectID },
-    }).validate({ name, description, url,code, program_id });
+    }).validate({ name, description, url, code, program_id });
 
     CoursesMongo.insert({
-      _id,
+      _id: new Mongo.ObjectID(),
       name,
       description,
       url,
       code,
-      program_id
+      program_id,
     });
-  }
-
-
-
-
-
-
-
+  },
 });

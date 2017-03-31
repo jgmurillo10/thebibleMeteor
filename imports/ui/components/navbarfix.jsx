@@ -30,10 +30,9 @@ class Navbarfix extends Component {
 
   render() {
 
-    const currentUser = this.props.currentUser;
-    console.log(currentUser, 'currentUser');
-    const userDataAvailable = (currentUser !== undefined);
-    const loggedIn = (currentUser && userDataAvailable);
+    const cu = Meteor.user();
+    console.log(cu);
+    const loggedIn = (cu !== null);
     console.log(loggedIn, 'logedin');
       return (
         <div>
@@ -50,9 +49,11 @@ class Navbarfix extends Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
-              <li className="active"><a href="#">Home</a></li>
+
+              <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
+
               <li><Link to={'/upload'}>Upload Files</Link></li>
 
             </ul>
@@ -66,6 +67,7 @@ class Navbarfix extends Component {
                   <li>
                     <a href="#" onClick={this.login}>  Login</a>
                   </li>
+
             </ul>
           </div>{/*/.nav-collapse */}
         </div>
