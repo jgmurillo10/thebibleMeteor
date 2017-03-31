@@ -9,8 +9,8 @@ export const FilesMongo = new Mongo.Collection('files');
 Meteor.methods({
 
   'programs.add'({ name, description, url}) {
+
     new SimpleSchema({
-      _id:        { type: Mongo.ObjectID},
       name:       { type: String },
       description:{ type: String },
       url:        { type: String },
@@ -19,7 +19,7 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
      }
     ProgramsMongo.insert({
-      _id: new Mongo.ObjectID(),
+      _id: new Mongo.ObjectID,
       name,
       description,
       url,
@@ -29,7 +29,6 @@ Meteor.methods({
   'courses.add'({ name, description, url, code, program_id }) {
     // var _id = new Mongo.ObjectID;
     new SimpleSchema({
-      _id:{ type: Mongo.ObjectID() },
       name: { type: String },
       description: { type: String },
       url: { type: String },
