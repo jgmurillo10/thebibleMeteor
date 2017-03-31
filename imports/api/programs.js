@@ -1,5 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import {Meteor} from "meteor/meteor";
 
 // var database = new MongoInternals.RemoteCollectionDriver('mongodb://127.0.0.1:3001/thebible');
 export const ProgramsMongo = new Mongo.Collection('programs');

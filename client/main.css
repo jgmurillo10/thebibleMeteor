@@ -108,7 +108,7 @@ h1,h2,h3,h4,h5,h6{
   padding: 6px 0;
 }
 .navbar .navbar-brand {
-  padding-top: 10px;
+  vertical-align: middle;
 }
 .modal-content{
   background-color: #CDD4B3;
@@ -150,7 +150,12 @@ h1,h2,h3,h4,h5,h6{
 
 .navbar-default .navbar-brand {
     color: black;
+    vertical-align: middle !important;
+    font-size: 2em;
 }
 .black{
   color: black;
+}
+.middle{
+  vertical-align: middle;
 }

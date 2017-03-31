@@ -21,14 +21,16 @@ class Navbarfix extends Component {
     e.preventDefault();
     Meteor.logout();
     browserHistory.push('/');
+
 }
 
   render() {
 
     const cu = Meteor.user();
     console.log(cu);
+    const name='';
+
     const loggedIn = (cu !== null);
-    console.log(loggedIn, 'loggedin');
       return (
         <div>
           <nav className="navbar navbar-default navbar-fixed-top">
@@ -40,30 +42,46 @@ class Navbarfix extends Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand align-middle" href="#">The Bible App</a>
+            <a className="navbar-brand middle" href="#">The Bible App</a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
+
+              {!loggedIn?
+                  <ul className="nav navbar-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  </ul>
+                 : ''
+              }
+              {loggedIn?
             <ul className="nav navbar-nav">
-
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-
               <li><Link to={'/upload'}>Upload Files</Link></li>
-
             </ul>
+            : ''
+          }
+          {!loggedIn?
             <ul className="nav navbar-nav navbar-right">
                   <li>
                     <a href="#" onClick={this.signup}>Signup</a>
                   </li>
-                  <li>
-                    <a href="#" onClick={this.logout}>  Logout</a>
-                  </li>
+
                   <li>
                     <a href="#" onClick={this.login}>  Login</a>
                   </li>
 
-            </ul>
+            </ul> :''}
+          {loggedIn?
+            <ul className="nav navbar-nav navbar-right">
+              <li className="middle">
+                <a>Welcome,</a>
+              </li>
+              <li>
+                <a href="#" onClick={this.logout}>  Logout</a>
+              </li>
+            </ul>: ''}
+
+
           </div>{/*/.nav-collapse */}
         </div>
       </nav>

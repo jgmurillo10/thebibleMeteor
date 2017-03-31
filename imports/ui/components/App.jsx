@@ -35,7 +35,7 @@ class App extends Component {
   logout(e){
     e.preventDefault();
     Meteor.logout();
-    //browserHistory.push('/');
+    browserHistory.push('/');
   }
     render() {
 
