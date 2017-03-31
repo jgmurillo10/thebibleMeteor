@@ -15,7 +15,11 @@ class App extends Component {
   getMeteorData(){
     return { isAuthenticated: Meteor.userId() !== null };
   }
-
+  componentDidMount(){
+    if(!this.state.isAuthenticated){
+      browserHistory.push('/');
+    }
+  }
   componentWillMount(){
     if (!this.state.isAuthenticated) {
       //browserHistory.push('/');
