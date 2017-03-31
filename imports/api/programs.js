@@ -27,7 +27,6 @@ Meteor.methods({
   },
 
   'courses.add'({ name, description, url, code, program_id }) {
-    // var _id = new Mongo.ObjectID;
     new SimpleSchema({
       name: { type: String },
       description: { type: String },

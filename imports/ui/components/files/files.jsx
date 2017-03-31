@@ -46,9 +46,7 @@ class Files extends Component {
 }
 // export default Files;
 export default AppContainer = createContainer(({params})=>{
-  console.log(params.courseId);
   let files = FilesMongo.find({course_id: new Mongo.ObjectID(params.courseId)});
-  console.log(files.fetch());
 	return {
 		files:files.fetch()
 	};

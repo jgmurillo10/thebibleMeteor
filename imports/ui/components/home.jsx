@@ -9,7 +9,7 @@ class Home extends Component {
 
           <div className="container-fluid add">
           <div className="background-lib"></div>
-          <div className="text-center"><i className="fa fa-fw fa-5x fa-book"></i></div>
+          <div className="text-center"><i className="fa fa-fw fa-4x fa-book"></i></div>
         <h1 className="text-center">Welcome</h1>
         <hr />
         <div className="row">

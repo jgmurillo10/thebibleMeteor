@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-// import {Nav,Navbar,NavItem} from 'react-bootstrap/lib/';
-// import { LinkContainer } from 'react-router-bootstrap';
 import { browserHistory } from 'react-router';
 import { Link } from 'react-router';
-
-// import { Grid, Form, FormControl, Navbar, Glyphicon,
-//   Nav, NavItem, Well, Row, Col, Button, NavDropdown, MenuItem } from 'react-bootstrap';
 
 class Navbarfix extends Component {
 
@@ -33,7 +28,7 @@ class Navbarfix extends Component {
     const cu = Meteor.user();
     console.log(cu);
     const loggedIn = (cu !== null);
-    console.log(loggedIn, 'logedin');
+    console.log(loggedIn, 'loggedin');
       return (
         <div>
           <nav className="navbar navbar-default navbar-fixed-top">

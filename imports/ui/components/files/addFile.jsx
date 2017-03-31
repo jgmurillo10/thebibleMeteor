@@ -37,17 +37,11 @@ class AddFile extends Component {
 
   uploadFile(file, signedRequest, url){
   var xhr = new XMLHttpRequest();
-      console.log("adasd" + this.props.params.courseId);
-      // console.log(this.state.file[0].courseId);
-
   xhr.open('PUT', signedRequest);
   xhr.onreadystatechange = () => {
     if(xhr.readyState === 4){
       if(xhr.status === 200){
-        console.log('entro gonorrea ome gonorrea');
-        {/*document.getElementById('preview').src = url;*/}
-        //document.getElementById('avatar-url').value = url;
-        // document.getElementById('file-url').value=url;
+        console.log('200 OK');
       }
       else{
         alert('Could not upload file.');
@@ -65,8 +59,6 @@ class AddFile extends Component {
       if(xhr.readyState === 4){
         if(xhr.status === 200){
           const response = JSON.parse(xhr.responseText);
-          console.log(response);
-
           this.uploadFile(file, response.signedRequest, response.url);
 
         }
@@ -81,8 +73,6 @@ class AddFile extends Component {
   initUpload(event){
     this.setState({files: event.target.files}) ;
     const file =  event.target.files[0];
-
-    console.log(event.target.files[0]);
     if(file == null){
       return alert('No file selected.');
     }

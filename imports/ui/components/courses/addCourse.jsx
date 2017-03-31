@@ -14,7 +14,6 @@ class AddCourse extends Component {
             code:'',
 
         };
-        //  this.addProgram = this.h.bind(this);
     }
 
     addCourse() {

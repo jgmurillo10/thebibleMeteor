@@ -41,6 +41,5 @@ class Programs extends Component {
 
 export default AppContainer = createContainer(() => {
     let programs = ProgramsMongo.find({});
-    console.log(programs.fetch());
     return {programs: programs.fetch()};
 }, Programs);

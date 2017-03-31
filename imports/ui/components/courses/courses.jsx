@@ -58,9 +58,7 @@ class Courses extends Component {
 }
 // export default Courses;
 export default AppContainer = createContainer(({params})=>{
-  console.log(params.programId);
   let courses = CoursesMongo.find({program_id: new Mongo.ObjectID(params.programId)});
-  console.log(courses.fetch());
 	return {
 		courses:courses.fetch()
 	};
