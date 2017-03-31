@@ -6,10 +6,20 @@ class Navbarfix extends Component {
 
   constructor(props) {
     super(props);
-    this.state= { logout : false };
+    this.state= { logout : false, username: '' };
     this.signup = this.signup.bind(this);
     this.logout = this.logout.bind(this);
     this.login = this.login.bind(this);
+  }
+  componentWillMount(){
+    console.log('will mount');
+    if (Meteor.user()) {
+      console.log('didupdate', Meteor.user().username);
+      this.setState({
+        username: Meteor.user().username
+      });
+      console.log(this.state.username, + 'username');
+    }
   }
   signup() {
     browserHistory.push('/signup');
@@ -26,11 +36,14 @@ class Navbarfix extends Component {
 
   render() {
 
-    const cu = Meteor.user();
+    let cu = Meteor.user();
     console.log(cu);
-    const name='';
+    let name='';
 
     const loggedIn = (cu !== null);
+    if(loggedIn){
+      console.log(cu);
+    }
       return (
         <div>
           <nav className="navbar navbar-default navbar-fixed-top">
@@ -48,34 +61,32 @@ class Navbarfix extends Component {
 
               {!loggedIn?
                   <ul className="nav navbar-nav">
-                  <li><a href="#">Home</a></li>
+                  <li><a aria-role="button"   data-toggle="collapse" data-target="#navbar"  href="#">Home</a></li>
                   </ul>
                  : ''
               }
               {loggedIn?
             <ul className="nav navbar-nav">
-              <li><Link to={'/upload'}>Upload Files</Link></li>
+              <li><Link aria-role="button"   data-toggle="collapse" data-target="#navbar"  to={'/upload'}>Upload Files</Link></li>
             </ul>
             : ''
           }
           {!loggedIn?
             <ul className="nav navbar-nav navbar-right">
                   <li>
-                    <a href="#" onClick={this.signup}>Signup</a>
+                    <a  aria-role="button"  data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.signup}>Signup</a>
                   </li>
 
                   <li>
-                    <a href="#" onClick={this.login}>  Login</a>
+                    <a aria-role="button"   data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.login}>  Login</a>
                   </li>
 
             </ul> :''}
           {loggedIn?
             <ul className="nav navbar-nav navbar-right">
-              <li className="middle">
-                <a>Welcome,</a>
-              </li>
+
               <li>
-                <a href="#" onClick={this.logout}>  Logout</a>
+                <a aria-role="button" data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.logout}>  Logout</a>
               </li>
             </ul>: ''}
 
