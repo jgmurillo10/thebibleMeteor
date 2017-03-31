@@ -16,6 +16,7 @@ import SignupPage from '../imports/ui/components/auth/SignupPage';
 import App from '../imports/ui/components/App.jsx';
 
 Meteor.startup(() => {
+   $('html').attr('lang', 'es');
   render(
     <Router history={browserHistory} >
     <Route path='/' component={App}>

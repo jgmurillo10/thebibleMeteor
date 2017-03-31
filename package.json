@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
+    "bcrypt": "^1.0.2",
     "bootstrap": "^3.3.7",
     "meteor-node-stubs": "~0.2.4",
     "react": "^15.4.2",
@@ -33,6 +34,7 @@
       "allowImportExportEverywhere": true
     },
     "plugins": [
+      "import",
       "meteor"
     ],
     "extends": [
@@ -42,6 +44,8 @@
     "settings": {
       "import/resolver": "meteor"
     },
-    "rules": {}
+    "rules": {
+      "linebreak-style": 0
+    }
   }
 }

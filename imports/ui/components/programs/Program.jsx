@@ -15,17 +15,15 @@ class Program extends Component {
           <div className="card-block">
             <h4 className="card-title">{this.props.program.name}</h4>
             <p className="card-text">{this.props.program.description}</p>
-
-
           </div>
           <div className=" text-center">
           <div className=" btn-group">
             {/* <button className="btn btn-danger" onClick={this.deleteProgram.bind(this)} >
              Delete
             </button> */}
-            <a href={this.props.program.url} target="_blank" className="btn btn-info cardbtn"><i className="fa fa-fw fa-globe"></i></a>
+            <a href={this.props.program.url} target="_blank" className="btn btn-info cardbtn" aria-label="Program's webpage"><i className="fa fa-fw fa-globe"></i></a>
 
-            <Link className="btn btn-primary " to={'/programs/' + this.props.program._id + '/courses'}>Courses</Link>
+          <Link className="btn btn-primary " aria-label="Program's courses" to={'/programs/' + this.props.program._id + '/courses'}>Courses</Link>
           </div>
           </div>
         </div>

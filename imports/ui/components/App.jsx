@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { browserHistory } from 'react-router';
 import Programs from "./programs/Programs";
 import {Meteor} from "meteor/meteor";
-import Navbarfix from './navbarfix';
+import Navbarfix from './navbarfix.jsx';
 const ROOT_URL = "https://thebibleapp.herokuapp.com/api";
 
 class App extends Component {
