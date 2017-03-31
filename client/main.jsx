@@ -19,19 +19,19 @@ import App from '../imports/ui/components/App.jsx';
 Meteor.startup(() => {
    $('html').attr('lang', 'es');
   render(
-    <Router history={browserHistory} >
-    <Route path='/' component={App}>
-      <IndexRoute component={Home}/>
+    <Router history={ browserHistory } >
+    <Route path='/' component={ App }>
+      <IndexRoute component={ Home }/>
       {/* <Route path='intro' component={Intro}/> */}
-      <Route path="login" component={LoginPage}/>
-      <Route path="signup" component={SignupPage}/>
-      <Route path='programs' component={Programs}/>
-      <Route path='upload' component={AddFullFile}/>
-      <Route path='programs/:programId/courses' component={Courses}/>
-      <Route path='programs/:programId/courses/:courseId/files' component={Files}/>
-      <Route path='programs/:programId/courses/:courseId' component={AddFile}/>
-      <Route path='programs/add' component={AddProgram}/>
-      <Route path='programs/:programId/addCourse' component={AddCourse}/>
+      <Route path="login" component={ LoginPage }/>
+      <Route path="signup" component={ SignupPage }/>
+      <Route path='programs' component={ Programs }/>
+      <Route path='upload' component={ AddFullFile }/>
+      <Route path='programs/:programId/courses' component={ Courses }/>
+      <Route path='programs/:programId/courses/:courseId/files' component={ Files }/>
+      <Route path='programs/:programId/courses/:courseId' component={ AddFile }/>
+      <Route path='programs/add' component={ AddProgram }/>
+      <Route path='programs/:programId/addCourse' component={ AddCourse }/>
 
     </Route>
   </Router>,
