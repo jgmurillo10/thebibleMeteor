@@ -24,9 +24,9 @@ class Programs extends Component {
                     </div>
                 </div>
                 <Link className='btn' to={'/programs/add'}>
-                    <i className='fa fa-plus fa-2x btn'>
-                        <span id='add'>Add Program</span>
-                    </i>
+
+                        <span id='add'><h3>  <i className='fa fa-plus fa-2x btn'></i>Add Program</h3></span>
+
                 </Link>
                 <div className='row'>
                     {this.props.programs.map(program => {

@@ -1,11 +1,9 @@
 body{
   background-color: #DDE8F7!important;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Lato', sans-serif;
-  font-weight: 100;
 }
 .margen {
   margin-top: 40px;
@@ -53,9 +51,6 @@ h1,h2,h3,h4,h5,h6{
   font-size: 0.8em;
 }
 
-* {
-    font-family: 'Roboto', sans-serif;
-}
 
 .form-group{
     padding: 0.9em;
@@ -92,6 +87,7 @@ h1,h2,h3,h4,h5,h6{
  }
 
  .navbar{
+   color: black;
    background-color: #BCC49C;
  }
 
@@ -144,4 +140,17 @@ h1,h2,h3,h4,h5,h6{
 .background-lib{
   background:
     url(./data/biblioteca.jpg) bottom center no-repeat,
+}
+.nav.navbar-nav.navbar-right li a {
+    color: black;
+}
+.nav.navbar-nav li a {
+    color: black;
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+.black{
+  color: black;
 }
