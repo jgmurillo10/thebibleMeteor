@@ -18,22 +18,21 @@ class AddCourse extends Component {
     }
 
     addCourse() {
+      Meteor.call('courses.add', {
+      _id : new Mongo.ObjectID(),
+       name: this.state.name,
+       description: this.state.description,
+       url: this.state.url,
+       code: this.state.code,
+       program_id:new Mongo.ObjectID(this.props.params.programId)
 
-      let name = this.state.name;
-      let description = this.state.description;
-      let url = this.state.url;
-      let code = this.state.code;
-      let program_id=new Mongo.ObjectID(this.props.params.programId);
-
-      CoursesMongo.insert({
-        name,
-        description,
-        url,
-        code,
-        program_id
-      });
-
-     alert("Course " + name + " added");
+     }, (err, res) => {
+       if (err) {
+         alert(err);
+       } else {
+         alert("Course " + this.state.name + " added");
+       }
+     });
     }
 
     render() {

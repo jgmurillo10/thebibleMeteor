@@ -18,18 +18,23 @@ class AddProgram extends Component{
 
  addProgram(event) {
     event.preventDefault();
-    let name = this.state.name;
-    let description = this.state.description;
-    let url = this.state.url;
 
-    ProgramsMongo.insert({
-      name,
-      description,
-      url
-    });
 
-   alert("Program " + name + " added");
+  Meteor.call('programs.add', {
+   name: this.state.name,
+   description: this.state.description,
+   url: this.state.url
+
+ }, (err, res) => {
+   if (err) {
+     alert(err);
+   } else {
+     alert("Program " + this.state.name + " added");
+   }
+ });
+
  }
+
 
 render() {
     return (
