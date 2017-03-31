@@ -18,21 +18,22 @@ class AddFile extends Component {
         courseid:''
     }
   }
+  addFile() {
+    Meteor.call('files.add', {
+     name: this.state.files[0].name,
+     size: this.state.files[0].size,
+     drive_url: "https://s3.amazonaws.com/thebibleapp/"+ this.state.files[0].name,
+     course_id: this.props.params.courseId,
 
-  addFile(){
-    let name =this.state.files[0].name;
-    let filesize = this.state.files[0].size;
-    let fileurl = "https://s3.amazonaws.com/thebibleapp/"+ this.state.files[0].name;
-    let courseid = this.props.params.courseId;
-
-    FilesMongo.insert({
-      name,
-      filesize,
-      fileurl,
-      courseid
-    });
-    alert("File " + name + " added");
+   }, (err, res) => {
+     if (err) {
+       alert(err);
+     } else {
+       alert("File " + this.state.files[0].name + " uploaded");
+     }
+   });
   }
+
 
   uploadFile(file, signedRequest, url){
   var xhr = new XMLHttpRequest();

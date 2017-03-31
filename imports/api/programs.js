@@ -45,4 +45,19 @@ Meteor.methods({
       program_id,
     });
   },
+  'files.add'({ name, size, course_id, drive_url}) {
+    new SimpleSchema({
+      name: { type: String },
+      size: { type: Number },
+      drive_url: { type: String },
+    }).validate({ name, size, drive_url});
+    console.log(course_id,' course_id');
+    FilesMongo.insert({
+      _id: new Mongo.ObjectID(),
+      name,
+      size,
+      course_id: new Mongo.ObjectID(course_id),
+      drive_url,
+    })
+  }
 });
