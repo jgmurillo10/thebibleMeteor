@@ -1,4 +1,12 @@
-
+body{
+  background-color: #DDE8F7!important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
 .margen {
   margin-top: 40px;
   padding-top: 40px;
@@ -25,6 +33,7 @@
     display: flex;
     position: relative;
     padding-bottom: 40px;
+    background-color: #F9CAC5;
 }
 .back{
 
@@ -73,4 +82,66 @@
 }
 .add{
   padding-top: 100px;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+     color: black;
+     text-decoration: none;
+     background-color: #F9CAC5;
+ }
+
+ .navbar{
+   background-color: #BCC49C;
+ }
+
+.link-1 {
+  transition: 0.3s ease;
+  background: #3fa46a;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid #3fa46a;
+  border-bottom: 4px solid #3fa46a;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+.link-1:hover {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0;
+}
+.navbar .navbar-brand {
+  padding-top: 10px;
+}
+.modal-content{
+  background-color: #CDD4B3;
+}
+.login-button{
+  background-color: #BCC49C;
+}
+.btn-app{
+  color:#fff;
+  background-color:#A5AB90;
+  border-color:#2e6da4
+}
+.btn-primary.focus,.btn-primary:focus{
+  color:#fff;
+  background-color:#286090;
+  border-color:#122b40
+}
+.btn-primary:hover{
+  color:#fff;
+  background-color:#286090;
+  border-color:#204d74
+}
+.file-title{
+
+}
+.card-app{
+  background-color: black;
+}
+.background-lib{
+  background:
+    url(./data/biblioteca.jpg) bottom center no-repeat,
 }

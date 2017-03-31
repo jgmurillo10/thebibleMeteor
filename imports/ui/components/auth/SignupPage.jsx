@@ -49,11 +49,16 @@ export default class SignupPage extends Component {
                 <div className="form-group">
                   <input type="password" id="signup-password" className="form-control input-lg" placeholder="password"/>
                 </div>
+                <div className="form-group text-center">
+                  <div className="col-md-6">
+                    <input type="submit" id="login-button" className="btn btn-app btn-lg  btn-block" value="Sign Up" />
+                  </div>
+                  <div className="col-md-6">
+                      <Link className="btn btn-danger btn-lg btn-block" to={'/' }>Go Back</Link>
+                    </div>
+              </div>
                 <div className="form-group">
-                  <input type="submit" id="login-button" className="btn btn-lg btn-primary btn-block" value="Sign Up" />
-                </div>
-                <div className="form-group">
-                  <p className="text-center">Already have an account? Login <Link to="/login">here</Link></p>
+                  <p className="text-center">Already have an account? Please login <Link to="/login">here</Link></p>
                 </div>
               </form>
             </div>

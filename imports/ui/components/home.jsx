@@ -6,7 +6,9 @@ class Home extends Component {
     render() {
 
         return (
+
           <div className="container-fluid add">
+          <div className="background-lib"></div>
           <div className="text-center"><i className="fa fa-fw fa-5x fa-book"></i></div>
         <h1 className="text-center">Welcome</h1>
         <hr />
@@ -17,7 +19,7 @@ class Home extends Component {
           <p>Also, the user can download any of the files listed by the app.</p>
           <p>Note: avoid uploading sensitive files. These files are stored in Amazon S3</p>
 
-          <p>Click Sign in button below to use the web app.</p>
+          <p>Click Sign up button below to signup or login if you have an account.</p>
           </div>
           <div className="text-center">
           <Link className="" to={'/signup' }>

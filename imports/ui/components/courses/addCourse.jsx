@@ -74,7 +74,7 @@ class AddCourse extends Component {
           <div className="form-group">
              <div className="col-sm-offset-2 col-sm-10">
                <div className="btn-group">
-                  <button className="btn btn-success" onClick={this.addCourse.bind(this)}>Save</button>
+                  <button className="btn btn-app" onClick={this.addCourse.bind(this)}>Save</button>
                 <Link className="btn btn-primary" to={'/programs/' + this.props.params.programId  +'/courses'}>Go Back</Link>
               </div>
             </div>

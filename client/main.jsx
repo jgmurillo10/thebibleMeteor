@@ -12,6 +12,7 @@ import Files from '../imports/ui/components/files/files';
 import AddFile from '../imports/ui/components/files/addFile';
 import LoginPage from '../imports/ui/components/auth/LoginPage';
 import SignupPage from '../imports/ui/components/auth/SignupPage';
+import AddFullFile from '../imports/ui/components/files/addFullFile';
 
 import App from '../imports/ui/components/App.jsx';
 
@@ -25,6 +26,7 @@ Meteor.startup(() => {
       <Route path="login" component={LoginPage}/>
       <Route path="signup" component={SignupPage}/>
       <Route path='programs' component={Programs}/>
+      <Route path='upload' component={AddFullFile}/>
       <Route path='programs/:programId/courses' component={Courses}/>
       <Route path='programs/:programId/courses/:courseId/files' component={Files}/>
       <Route path='programs/:programId/courses/:courseId' component={AddFile}/>

@@ -5,13 +5,15 @@ class File extends Component {
 
   render(){
     return (
-      <div className="col-md-6 col-sm-6">
-        <div className="card">
+      <div className="card  card-app  col-md-4 col-xs-12 col-sm-4">
+        <div className="">
+
           <div className="card-block">
-            <h4 className="card-title">{this.props.file.name}</h4>
+
+            <h4 className="card-title file-title">{this.props.file.name}</h4>
           </div>
           <div className="text-center">
-            <a href={this.props.file.drive_url} className="btn btn-primary " target='_blank'>
+            <a href={this.props.file.drive_url} className="btn btn-app " target='_blank'>
             <i className="fa fa-fw fa-download"></i>
             Download
             </a>
