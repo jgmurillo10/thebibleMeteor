@@ -41,9 +41,8 @@ class Courses extends Component {
               </div>
 
                <Link className="btn" to={'/programs/' + this.props.params.programId + '/addCourse' }>
-                <i className="fa fa-plus fa-2x btn">
-                  <span id="add">Add new Course</span>
-                </i>
+                 <span id='add'><h3>  <i className='fa fa-plus fa-2x btn'></i>Add Course</h3></span>
+
               </Link>
 
               <div className="row">
