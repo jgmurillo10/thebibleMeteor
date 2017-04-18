@@ -1,8 +1,12 @@
 body{
   background-color: #E1E2E1 !important;
+  /*background: #E1E2E1 url('./../data/cube-2.png') repeat !important;*/
+
   font-family: 'Roboto', sans-serif;
   color: black;
+
 }
+
 h1,h2,h3,h4,h5,h6{
   font-family: 'Lato', sans-serif;
 }
