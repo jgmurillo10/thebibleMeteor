@@ -22,3 +22,7 @@ react-meteor-data
 accounts-password
 twbs:bootstrap
 aldeed:simple-schema
+practicalmeteor:mocha
+dburles:factory
+hwillson:stub-collections
+xolvio:cleaner
