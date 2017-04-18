@@ -7,7 +7,7 @@ class Program extends Component {
 
   render(){
     return (
-      <div className="col-md-6 col-sm-6 ">
+      <div className="col-md-4 col-sm-4 ">
         <div className="card ">
           <div className="card-block">
             <h4 className="card-title">{this.props.program.name}</h4>
@@ -20,7 +20,7 @@ class Program extends Component {
             </button> */}
             <a href={this.props.program.url} target="_blank" className="btn btn-info cardbtn" aria-label="Program's webpage"><i className="fa fa-fw fa-globe"></i></a>
 
-            <Link className="btn btn-app " aria-label="Program's courses" to={'/programs/' + this.props.program._id + '/courses'}>Courses</Link>
+            <Link className="btn btn-app" aria-label="Program's courses" to={'/programs/' + this.props.program._id + '/courses'}>Courses</Link>
 
           </div>
           </div>
