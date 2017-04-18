@@ -89,7 +89,7 @@ class AddFile extends Component {
             <div className="text-center">
             <div className="btn-group">
               <button className="btn btn-app " onClick={this.addFile.bind(this)}>Save</button>
-              <Link className="btn btn-primary " to={'/programs/' + this.props.params.programId + '/courses/' +this.props.params.courseId + '/files' }>Go Back</Link>
+              <Link className="btn btn-info " to={'/programs/' + this.props.params.programId + '/courses/' +this.props.params.courseId + '/files' }>Go Back</Link>
             </div>
             </div>
 

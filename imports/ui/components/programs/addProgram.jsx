@@ -70,7 +70,7 @@ render() {
                   <button className="btn btn-app" onClick={this.addProgram.bind(this)}>
                     Save
                   </button>
-                  <Link className="btn btn-primary" to={'/programs' }>Go Back</Link>
+                  <Link className="btn btn-info" to={'/programs' }>Go Back</Link>
               </div>
             </div>
           </div>

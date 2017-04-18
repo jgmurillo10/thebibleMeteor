@@ -73,7 +73,7 @@ class AddCourse extends Component {
              <div className="col-sm-offset-2 col-sm-10">
                <div className="btn-group">
                   <button className="btn btn-app" onClick={this.addCourse.bind(this)}>Save</button>
-                <Link className="btn btn-primary" to={'/programs/' + this.props.params.programId  +'/courses'}>Go Back</Link>
+                <Link className="btn btn-info" to={'/programs/' + this.props.params.programId  +'/courses'}>Go Back</Link>
               </div>
             </div>
           </div>
