@@ -25,7 +25,7 @@ class Programs extends Component {
                 </div>
                 <Link className='btn' to={'/programs/add'}>
 
-                        <span id='add'><h3>  <i className='fa fa-plus fa-2x btn'></i>Add Program</h3></span>
+                        <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Add Program</h3></span>
 
                 </Link>
                 <div className='row'>

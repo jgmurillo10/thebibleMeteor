@@ -38,7 +38,8 @@ class AddProgram extends Component{
 
 render() {
     return (
-          <div className="add">
+          <div className="addPadding">
+            <h1>Add Program</h1>
           <div className="form-horizontal">
               <div className="form-group">
               <label className="control-label col-sm-2" htmlFor="nombre">Name:</label>
@@ -70,7 +71,7 @@ render() {
                   <button className="btn btn-app" onClick={this.addProgram.bind(this)}>
                     Save
                   </button>
-                  <Link className="btn btn-primary" to={'/programs' }>Go Back</Link>
+                  <Link className="btn btn-info" to={'/programs' }>Go Back</Link>
               </div>
             </div>
           </div>

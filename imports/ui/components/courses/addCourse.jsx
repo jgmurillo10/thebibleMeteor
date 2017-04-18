@@ -36,7 +36,8 @@ class AddCourse extends Component {
 
     render() {
         return (
-          <div className="add">
+          <div className="addPadding">
+            <h1>Add Course</h1>
           <div className="form-group">
           <label className="control-label col-sm-2" htmlFor="nombre">Name:</label>
             <div className="col-sm-10">
@@ -73,7 +74,7 @@ class AddCourse extends Component {
              <div className="col-sm-offset-2 col-sm-10">
                <div className="btn-group">
                   <button className="btn btn-app" onClick={this.addCourse.bind(this)}>Save</button>
-                <Link className="btn btn-primary" to={'/programs/' + this.props.params.programId  +'/courses'}>Go Back</Link>
+                <Link className="btn btn-info" to={'/programs/' + this.props.params.programId  +'/courses'}>Go Back</Link>
               </div>
             </div>
           </div>

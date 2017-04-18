@@ -1,6 +1,7 @@
 body{
-  background-color: #DDE8F7!important;
+  background-color: #E1E2E1 !important;
   font-family: 'Roboto', sans-serif;
+  color: black;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Lato', sans-serif;
@@ -46,9 +47,19 @@ h1,h2,h3,h4,h5,h6{
 }
 .breadcrumb {
   font-size: 1.2em;
+  background-color: white !important;
+}
+.active{
+  color: black !important;
+}
+.add{
+  color: #45A39A;
 }
 #add{
   font-size: 0.8em;
+}
+.addPadding{
+  padding-top: 100px;
 }
 
 
@@ -75,8 +86,9 @@ h1,h2,h3,h4,h5,h6{
     cursor: inherit;
     display: block;
 }
-.add{
-  padding-top: 100px;
+
+.btn-info{
+  background-color: #067E81 !important;
 }
 
 .navbar .nav > li > a:focus,
@@ -88,7 +100,7 @@ h1,h2,h3,h4,h5,h6{
 
  .navbar{
    color: black;
-   background-color: #BCC49C;
+   background-color: #4db6ac;
  }
 
 .link-1 {
@@ -117,10 +129,11 @@ h1,h2,h3,h4,h5,h6{
   background-color: #BCC49C;
 }
 .btn-app{
-  color:#fff;
-  background-color:#A5AB90;
+  color:black;
+  background-color:#80C5B9;
   border-color:#2e6da4
 }
+
 .btn-primary.focus,.btn-primary:focus{
   color:#fff;
   background-color:#286090;
@@ -151,11 +164,31 @@ h1,h2,h3,h4,h5,h6{
 .navbar-default .navbar-brand {
     color: black;
     vertical-align: middle !important;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .black{
   color: black;
 }
 .middle{
   vertical-align: middle;
+}
+
+
+
+/*scroll for cards content*/
+.card-title{
+  height: 78px;
+}
+.card-text{
+  height:150px;
+  overflow:auto;
+}
+
+/*home color for contrasting*/
+.home{
+  color:black;
+}
+/*navbar font size for responsive*/
+navbar-title{
+  /*font-size: */
 }
