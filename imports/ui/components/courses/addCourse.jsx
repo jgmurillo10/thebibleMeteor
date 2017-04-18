@@ -36,7 +36,8 @@ class AddCourse extends Component {
 
     render() {
         return (
-          <div className="add">
+          <div className="addPadding">
+            <h1>Add Course</h1>
           <div className="form-group">
           <label className="control-label col-sm-2" htmlFor="nombre">Name:</label>
             <div className="col-sm-10">
