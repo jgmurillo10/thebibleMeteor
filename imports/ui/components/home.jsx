@@ -15,6 +15,7 @@ class Home extends Component {
         <div className="row">
           <div className="col-md-offset-2 col-md-8 text-justified">
           <h3>This is the bible app. </h3>
+
           <p>This project is a web application designed to storage academic files. The files are organized by program and course from Universidad de los Andes.</p>
           <p>The bible app allow the users create or delete an Undergraduate Program, create a Course and upload a file of any type (pdf's, png's, zip's, etc). </p>
             <p>Also, the user can download any of the files listed by the app.</p>
