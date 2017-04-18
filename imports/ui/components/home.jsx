@@ -7,7 +7,7 @@ class Home extends Component {
 
         return (
 
-          <div className="container-fluid add">
+          <div className="container-fluid add home">
           <div className="background-lib"></div>
           <div className="text-center"><i className="fa fa-fw fa-4x fa-book"></i></div>
         <h1 className="text-center">Welcome</h1>

@@ -164,7 +164,7 @@ h1,h2,h3,h4,h5,h6{
 .navbar-default .navbar-brand {
     color: black;
     vertical-align: middle !important;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .black{
   color: black;
@@ -182,4 +182,13 @@ h1,h2,h3,h4,h5,h6{
 .card-text{
   height:150px;
   overflow:auto;
+}
+
+/*home color for contrasting*/
+.home{
+  color:black;
+}
+/*navbar font size for responsive*/
+navbar-title{
+  /*font-size: */
 }

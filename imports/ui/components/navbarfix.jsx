@@ -55,7 +55,7 @@ class Navbarfix extends Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand middle" href="#">The Bible App</a>
+            <a className="navbar-brand middle navbar-title" href="#">The Bible App</a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
 
