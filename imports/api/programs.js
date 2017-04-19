@@ -6,6 +6,9 @@ export const ProgramsMongo = new Mongo.Collection('programs');
 export const CoursesMongo = new Mongo.Collection('courses');
 export const FilesMongo = new Mongo.Collection('files');
 
+/* Bien por el uso de methods para manejar operaciones de las colecciones,
+hay unos cuantos errores con eslint.*/
+
 Meteor.methods({
 
   'programs.add'({ name, description, url }) {

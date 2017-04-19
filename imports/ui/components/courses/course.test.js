@@ -12,7 +12,8 @@ describe('Course', () => {
   it('should render', () => {
     const coursetest = Factory.create('coursetest');
     const comp = shallow(<Course course={coursetest} />);
-
+    // Tal vez se podría incluir algun assert con selectores de algo que se renderiza
+    // en el componente
     //console.log(comp.debug());
     chai.assert.equal(comp.instance().props.course.name, 'TestCourse');
     chai.assert.equal(comp.instance().props.course.url, 'uniandes.com');

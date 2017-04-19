@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-
+/*Hay algunos errores de estilo de código que saca eslint */
 import { Meteor } from 'meteor/meteor';
 import {chai, expect } from 'meteor/practicalmeteor:chai';
 import { Factory } from 'meteor/dburles:factory';

@@ -12,7 +12,8 @@ describe('Program', () => {
   it('should render', () => {
     const programtest = Factory.create('programtest');
     const item = shallow(<Program program={programtest} />);
-
+    // Tal vez se podría incluir algun assert con selectores de algo que se renderiza
+    // en el componente
   //  console.log(item.debug());
     chai.assert.equal(item.instance().props.program.name, 'TestProgram');
     chai.assert.equal(item.instance().props.program.url, 'google.com');

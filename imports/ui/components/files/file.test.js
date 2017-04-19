@@ -12,7 +12,8 @@ describe('File', () => {
   it('should render', () => {
     const filetest = Factory.create('filetest');
     const comp = shallow(<File file={filetest} />);
-
+    // Tal vez se podría incluir algun assert con selectores de algo que se renderiza
+    // en el componente
     //console.log(comp.debug());
     chai.assert.equal(comp.instance().props.file.name, 'TestFile');
     chai.assert.equal(comp.instance().props.file.drive_url, 'aws.com');
