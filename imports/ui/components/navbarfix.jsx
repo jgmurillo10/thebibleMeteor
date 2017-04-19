@@ -12,13 +12,11 @@ class Navbarfix extends Component {
     this.login = this.login.bind(this);
   }
   componentWillMount(){
-    console.log('will mount');
     if (Meteor.user()) {
       console.log('didupdate', Meteor.user().username);
       this.setState({
         username: Meteor.user().username
       });
-      console.log(this.state.username, + 'username');
     }
   }
   signup() {
@@ -37,12 +35,10 @@ class Navbarfix extends Component {
   render() {
 
     let cu = Meteor.user();
-    console.log(cu);
     let name='';
 
     const loggedIn = (cu !== null);
     if(loggedIn){
-      console.log(cu);
     }
       return (
         <div>
