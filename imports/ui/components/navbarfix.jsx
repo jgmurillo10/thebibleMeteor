@@ -35,7 +35,7 @@ class Navbarfix extends Component {
 }
 
   render() {
-
+    // Bueno lo de dar las opciones de login logout según el estado de la sesión :+1:
     let cu = Meteor.user();
     console.log(cu);
     let name='';
