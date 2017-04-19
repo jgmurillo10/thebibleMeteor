@@ -23,7 +23,7 @@ class AddFile extends Component {
      name: this.state.files[0].name,
      size: this.state.files[0].size,
      drive_url: "https://s3.amazonaws.com/thebibleapp/"+ this.state.files[0].name,
-     course_id: this.props.params.courseId,
+     course_id: new Mongo.ObjectID(this.props.params.courseId),
 
    }, (err, res) => {
      if (err) {

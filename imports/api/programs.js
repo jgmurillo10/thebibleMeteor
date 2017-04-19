@@ -17,6 +17,7 @@ Meteor.methods({
     if (!Meteor.user()) {
       throw new Meteor.Error('not-authorized');
      }
+
     ProgramsMongo.insert({
       _id: new Mongo.ObjectID(),
       name,
@@ -51,7 +52,7 @@ Meteor.methods({
       _id: new Mongo.ObjectID(),
       name,
       size,
-      course_id: new Mongo.ObjectID(course_id),
+      course_id,
       drive_url,
     });
   },
