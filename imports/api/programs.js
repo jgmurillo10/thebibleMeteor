@@ -6,6 +6,22 @@ export const ProgramsMongo = new Mongo.Collection('programs');
 export const CoursesMongo = new Mongo.Collection('courses');
 export const FilesMongo = new Mongo.Collection('files');
 
+ProgramsMongo.deny({
+  insert() { return true; },
+  update() { return true; },
+  remove() { return true; },
+});
+CoursesMongo.deny({
+  insert() { return true; },
+  update() { return true; },
+  remove() { return true; },
+});
+FilesMongo.deny({
+  insert() { return true; },
+  update() { return true; },
+  remove() { return true; },
+});
+
 Meteor.methods({
 
   'programs.add'({ name, description, url }) {
@@ -24,6 +40,7 @@ Meteor.methods({
       description,
       url,
     });
+
   },
   'courses.add'({ name, description, url, code, program_id }) {
     new SimpleSchema({
@@ -41,6 +58,7 @@ Meteor.methods({
       code,
       program_id,
     });
+
   },
   'files.add'({ name, size, course_id, drive_url }) {
     new SimpleSchema({
@@ -55,5 +73,6 @@ Meteor.methods({
       course_id,
       drive_url,
     });
+
   },
 });
