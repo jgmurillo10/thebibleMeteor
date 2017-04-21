@@ -35,6 +35,7 @@ class Navbarfix extends Component {
   render() {
 
     let cu = Meteor.user();
+    //No se usa name
     let name='';
 
     const loggedIn = (cu !== null);
