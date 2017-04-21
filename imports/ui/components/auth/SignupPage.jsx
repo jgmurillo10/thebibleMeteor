@@ -13,6 +13,7 @@ export default class SignupPage extends Component {
 
   handleSubmit(e){
     e.preventDefault();
+    //En vez de usar document.getElementById se puede hacer uso de los refs
     let name = document.getElementById("signup-name").value;
     let email = document.getElementById("signup-email").value;
     let password = document.getElementById("signup-password").value;
