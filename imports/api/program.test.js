@@ -74,13 +74,13 @@ if (Meteor.isClient){
         const pname = faker.lorem.word();
         const pdescription =faker.lorem.sentence();
         const purl = faker.internet.url();
-
+        //Faltaba ; al final
         Meteor.call('programs.add', {
          name: pname,
          description: pdescription,
          url: purl
          }
-         )
+         );
          //console.log(ProgramsMongo.find());
         chai.assert.equal(ProgramsMongo.find().count(), 1);
       });
@@ -99,6 +99,7 @@ if (Meteor.isClient){
         const pcode = 'ISIS1234';
         const pprogram_id = new Mongo.ObjectID();
 //name, description, url, code, program_id
+//        Faltaba ; al final
         Meteor.call('courses.add', {
          name: courseName,
          description: pdescription,
@@ -106,7 +107,7 @@ if (Meteor.isClient){
          code : pcode,
          program_id: pprogram_id
          }
-         )
+         );
          //console.log(ProgramsMongo.find());
         chai.assert.equal(CoursesMongo.find().count(), 1);
       });
@@ -124,14 +125,14 @@ if (Meteor.isClient){
         const psize = faker.random.number();
         const pcourse_id = new Mongo.ObjectID().toString();
 
-
+        //Faltaba ; al final
         Meteor.call('files.add', {
          name: pname,
          drive_url: pdrive_url,
          size: psize,
          course_id: pcourse_id,
          }
-         )
+         );
          //console.log(ProgramsMongo.find());
         chai.assert.equal(FilesMongo.find().count(), 1);
       });
