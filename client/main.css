@@ -30,6 +30,7 @@ h1,h2,h3,h4,h5,h6{
 .card {
     border: 1px solid #ddd;
     border-radius: 5px;
+    /*El padding se esta definiendo dos veces, se puede definir el padding de arriba, abajo, izquierda y derecha en una sola linea*/
     padding: 10px;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -155,6 +156,7 @@ h1,h2,h3,h4,h5,h6{
   background-color: black;
 }
 .background-lib{
+    /*Debería terminar en ;*/
   background:
     url(./data/biblioteca.jpg) bottom center no-repeat,
 }
@@ -193,6 +195,7 @@ h1,h2,h3,h4,h5,h6{
   color:black;
 }
 /*navbar font size for responsive*/
+/*Hace falta el . es decir .navbar-title*/
 navbar-title{
   /*font-size: */
 }
