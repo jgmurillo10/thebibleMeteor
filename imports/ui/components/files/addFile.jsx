@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import {Link} from 'react-router';
+//Import sin usar
 import {FilesMongo} from "../../../api/programs.js";
 
 const ROOT_URL = "https://thebibleapp.herokuapp.com";
@@ -36,6 +37,7 @@ class AddFile extends Component {
 
 
   uploadFile(file, signedRequest, url){
+  //  Se podría usar let, el parametro url no es usado
   var xhr = new XMLHttpRequest();
   xhr.open('PUT', signedRequest);
   xhr.onreadystatechange = () => {
