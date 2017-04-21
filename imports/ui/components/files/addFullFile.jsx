@@ -33,6 +33,7 @@ class AddFullFile extends Component {
 
 
   uploadFile(file, signedRequest, url){
+    //  Se podría usar let, el parametro url no es usado
   var xhr = new XMLHttpRequest();
       console.log("adasd" + this.props.params.courseId);
       // console.log(this.state.file[0].courseId);
