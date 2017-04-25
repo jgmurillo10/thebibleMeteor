@@ -1,9 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component , PropTypes } from 'react';
 import Program from './Program';
-import {Meteor} from 'meteor/meteor';
-import {createContainer} from 'meteor/react-meteor-data';
-import {ProgramsMongo} from '../../../api/programs.js';
-import {Link} from 'react-router';
+import { Meteor } from 'meteor/meteor';
+import { createContainer } from 'meteor/react-meteor-data';
+import { ProgramsMongo } from '../../../api/programs.js';
+import { Link } from 'react-router';
 
 class Programs extends Component {
 

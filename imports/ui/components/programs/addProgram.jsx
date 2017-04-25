@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
-import {ProgramsMongo} from "../../../api/programs.js";
+import React, { Component } from 'react';
+import { Link } from 'react-router';
+import { ProgramsMongo } from "../../../api/programs.js";
+import { ModalAlert } from "../modal/ModalAlert.jsx";
 
 
 class AddProgram extends Component{
@@ -68,6 +69,7 @@ render() {
           <div className="form-group">
              <div className="col-sm-offset-2 col-sm-10">
                <div className="btn-group">
+
                   <button className="btn btn-app" onClick={this.addProgram.bind(this)}>
                     Save
                   </button>
@@ -75,8 +77,11 @@ render() {
               </div>
             </div>
           </div>
+
       </div>
       </div>
+
+
 
     );
   }
