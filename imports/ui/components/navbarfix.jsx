@@ -57,24 +57,24 @@ class Navbarfix extends Component {
 
               {!loggedIn?
                   <ul className="nav navbar-nav">
-                  <li><a aria-role="button"   data-toggle="collapse" data-target="#navbar"  href="#">Home</a></li>
+                  <li><a role="button"   data-toggle="collapse" data-target="#navbar"  href="#">Home</a></li>
                   </ul>
                  : ''
               }
               {loggedIn?
             <ul className="nav navbar-nav">
-              <li><Link aria-role="button"   data-toggle="collapse" data-target="#navbar"  to={'/upload'}>Upload Files</Link></li>
+              <li><Link role="button"   data-toggle="collapse" data-target="#navbar"  to={'/upload'}>Upload Files</Link></li>
             </ul>
             : ''
           }
           {!loggedIn?
             <ul className="nav navbar-nav navbar-right">
                   <li>
-                    <a  aria-role="button"  data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.signup}>Signup</a>
+                    <a  role="button"  data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.signup}>Signup</a>
                   </li>
 
                   <li>
-                    <a aria-role="button"   data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.login}>  Login</a>
+                    <a role="button"   data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.login}>  Login</a>
                   </li>
 
             </ul> :''}
@@ -82,7 +82,7 @@ class Navbarfix extends Component {
             <ul className="nav navbar-nav navbar-right">
 
               <li>
-                <a aria-role="button" data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.logout}>  Logout</a>
+                <a role="button" data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.logout}>  Logout</a>
               </li>
             </ul>: ''}
 

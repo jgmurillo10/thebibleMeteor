@@ -33,6 +33,9 @@ Meteor.methods({
     if (!Meteor.user()) {
       throw new Meteor.Error('not-authorized');
      }
+    else if(name ===''||description === ''|| url === ''){
+      throw new Meteor.Error('invalid input, all fields must be filled')
+    }
 
     ProgramsMongo.insert({
       _id: new Mongo.ObjectID(),
@@ -50,6 +53,9 @@ Meteor.methods({
       code: { type: String },
       program_id: { type: Mongo.ObjectID },
     }).validate({ name, description, url, code, program_id });
+    if(name ===''||description === ''|| url === ''|| code === ''){
+      throw new Meteor.Error('invalid input, all fields must be filled')
+    }
     CoursesMongo.insert({
       _id: new Mongo.ObjectID(),
       name,
@@ -66,6 +72,9 @@ Meteor.methods({
       size: { type: Number },
       drive_url: { type: String },
     }).validate({ name, size, drive_url });
+    if(name ===''||size === ''|| drive_url === ''){
+      throw new Meteor.Error('invalid input, all fields must be filled')
+    }
     FilesMongo.insert({
       _id: new Mongo.ObjectID(),
       name,

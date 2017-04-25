@@ -16,14 +16,18 @@ export default class SignupPage extends Component {
     let name = document.getElementById("signup-name").value;
     let email = document.getElementById("signup-email").value;
     let password = document.getElementById("signup-password").value;
-    this.setState({error: "test"});
+    this.setState({error: ""});
     Accounts.createUser({email: email, username: name, password: password}, (err) => {
       if(err){
         this.setState({
           error: err.reason
         });
       } else {
-        browserHistory.push('/login');
+        this.setState({
+          error: 'User created succesfully'
+        });
+
+        browserHistory.push('/programs');
       }
     });
   }
