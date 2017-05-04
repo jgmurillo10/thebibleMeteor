@@ -15,7 +15,12 @@ import SignupPage from '../imports/ui/components/auth/SignupPage';
 import AddFullFile from '../imports/ui/components/files/addFullFile';
 
 import App from '../imports/ui/components/App.jsx';
-
+/* En general la pagina esta completa, tiene las funcionalidades adecuadas e implementa seguridad con usuarios. Por otro lado,
+la usabilidad tiene algunos puntos de mejora. Es aconsejable usar mas de una fuente para diferenciar titulos y palabras clave, 
+asi como para brindar estetica. Font pair recomienda pares de Google-Fonts. Ademas, la pagina podria usar quizas algun color 
+más, o de pronto un color que se utilice para ser más llamativo para dar navegabilidad mas facil. Por ejemplo con los iconos 
+de font-awesome se pueden poner de diferentes colores o algo por el estilo. 
+*/
 Meteor.startup(() => {
    $('html').attr('lang', 'es');
    
