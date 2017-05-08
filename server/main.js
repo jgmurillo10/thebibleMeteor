@@ -15,4 +15,5 @@ BrowserPolicy.content.allowOriginForAll('*.gstatic.com');
 BrowserPolicy.content.allowDataUrlForAll();
   }
 
+
 });

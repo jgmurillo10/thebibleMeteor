@@ -18,19 +18,30 @@ class AddFullFile extends Component {
         size:'',
         fileurl:'',
         courseid:'',
-        programs:[],
-        courses: [],
-        programid: ''
+        programid: '',
+        programs: props.programs,
+        courses: props.courses
     }
+    this.handleChangeProgram = this.handleChangeProgram.bind(this);
+    this.handleChangeCourse = this.handleChangeCourse.bind(this);
   }
   handleChangeProgram(e){
-    let coursesNew = CoursesMongo.find({program_id: e.target.value});
-    this.setState({courses: coursesNew , programid:e.target.value});
+    this.setState({programid:e.target.value}, ()=>{
+          console.log(this.state.programid, 'STATEEEE');
+
+    })
+
+
 
   }
   handleChangeCourse(e){
     this.setState({courseid:e.target.value});
+    console.log(this.state, 'STATEEEE');
 
+
+  }
+  filterCourses(){
+    let filterCourses = this
   }
   addFile(){
     event.preventDefault();
