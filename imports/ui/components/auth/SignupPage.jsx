@@ -1,12 +1,14 @@
-import React, { Component, PropTypes } from 'react'
-import { browserHistory, Link } from 'react-router'
-import { Accounts } from 'meteor/accounts-base'
+import React, { Component, PropTypes } from 'react';
+import { browserHistory, Link } from 'react-router';
+import { Accounts } from 'meteor/accounts-base';
+import { Redirect } from 'react-router';
 
 export default class SignupPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      error: ''
+      error: '',
+      logged: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -24,15 +26,17 @@ export default class SignupPage extends Component {
         });
       } else {
         this.setState({
-          error: 'User created succesfully'
+          logged: true,
         });
 
-        browserHistory.push('/programs');
       }
     });
   }
 
   render(){
+    if (this.state.logged) {
+      browserHistory.push('/programs');
+    }
     const error = this.state.error;
     return (
       <div className="modal show">

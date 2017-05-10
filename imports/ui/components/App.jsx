@@ -6,37 +6,8 @@ import Navbarfix from './navbarfix.jsx';
 const ROOT_URL = "https://thebibleapp.herokuapp.com/api";
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = this.getMeteorData();
-    this.logout = this.logout.bind(this);
-  }
 
-  getMeteorData(){
-    return { isAuthenticated: Meteor.userId() !== null };
-  }
-  componentDidMount(){
-    if(!this.state.isAuthenticated){
-      browserHistory.push('/');
-    }
-  }
-  componentWillMount(){
-    if (!this.state.isAuthenticated) {
-      //browserHistory.push('/');
-    }
-  }
 
-  componentDidUpdate(prevProps, prevState){
-    if (!this.state.isAuthenticated) {
-      //browserHistory.push('/');
-    }
-  }
-
-  logout(e){
-    e.preventDefault();
-    Meteor.logout();
-    browserHistory.push('/');
-  }
     render() {
 
         return (

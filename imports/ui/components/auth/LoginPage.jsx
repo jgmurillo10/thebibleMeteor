@@ -1,12 +1,14 @@
-import React, { Component, PropTypes } from 'react'
-import { browserHistory, Link } from 'react-router'
-import { createContainer } from 'meteor/react-meteor-data'
+import React, { Component, PropTypes } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
+import { Redirect } from 'react-router';
+import { browserHistory, Link } from 'react-router';
 
 export default class LoginPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      error: ''
+      error: '',
+      logged: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -18,15 +20,20 @@ export default class LoginPage extends Component {
     Meteor.loginWithPassword(email, password, (err) => {
       if(err){
         this.setState({
-          error: err.reason
+          error: err.reason,
         });
       } else {
-        browserHistory.push('/programs');
+        this.setState({
+          logged: true,
+        })
       }
     });
   }
 
   render(){
+    if (this.state.logged) {
+      browserHistory.push('/programs');
+    }
     const error = this.state.error;
     return (
       <div className="modal show">
