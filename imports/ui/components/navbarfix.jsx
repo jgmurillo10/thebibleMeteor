@@ -53,29 +53,29 @@ class Navbarfix extends Component {
 
               {logged?
                 <ul className="nav navbar-nav">
-                  <li><Link role="button"   data-toggle="collapse" data-target="#navbar"  to={'/upload'}>Upload Files</Link></li>
+                  <li><Link role="button"   data-toggle="collapse" data-target="#navbar"  to={'/upload'}>Cargar archivos</Link></li>
                 </ul>
 
                  :
                  <ul className="nav navbar-nav">
-                 <li><a role="button"   data-toggle="collapse" data-target="#navbar"  href="#">Home</a></li>
+                 <li><a role="button"   data-toggle="collapse" data-target="#navbar"  href="#">Inicio</a></li>
                  </ul>
               }
           {logged?
             <ul className="nav navbar-nav navbar-right">
 
               <li>
-                <a role="button" data-toggle="collapse" data-target="#navbar"  href="#" onClick={() => { this.logout(); }}>  Logout</a>
+                <a role="button" data-toggle="collapse" data-target="#navbar"  href="#" onClick={() => { this.logout(); }}>  Salir</a>
               </li>
             </ul>
              :
              <ul className="nav navbar-nav navbar-right">
                    <li>
-                     <Link to={'/signup'}  role="button"  data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.signup}>Signup</Link>
+                     <Link to={'/signup'}  role="button"  data-toggle="collapse" data-target="#navbar"  href="#" onClick={this.signup}>Registrarse</Link>
                    </li>
 
                    <li>
-                     <Link to={'/login'} role="button"   data-toggle="collapse" data-target="#navbar"  href="#">  Login</Link>
+                     <Link to={'/login'} role="button"   data-toggle="collapse" data-target="#navbar"  href="#"> Entrar</Link>
                    </li>
 
              </ul>
