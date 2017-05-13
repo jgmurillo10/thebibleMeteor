@@ -38,16 +38,16 @@ class Navbarfix extends Component {
 
       return (
         <div>
-          <nav className="navbar navbar-default navbar-fixed-top">
+          <nav className="navbar navbar-custom navbar-fixed-top">
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span className="sr-only">Toggle navigation</span>
+              <span className="sr-only ">Toggle navigation</span>
               <span className="icon-bar" />
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand middle navbar-title" href="#">The Bible App</a>
+            <a className="navbar-brand  navbar-title" href="#"></a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
 
@@ -59,6 +59,7 @@ class Navbarfix extends Component {
                  :
                  <ul className="nav navbar-nav">
                  <li><a role="button"   data-toggle="collapse" data-target="#navbar"  href="#">Inicio</a></li>
+                 <li><a role="button"   data-toggle="collapse" data-target="#services"  href="#services">Acerca de la aplicación</a></li>
                  </ul>
               }
           {logged?

@@ -154,6 +154,9 @@ blockquote {
 #cd-zoom-in, #cd-zoom-out{
 	background-color: rgba(185,141,114,0.9); /* RGBA of Primary color - opacity .9 */
 }
+.navbar-custom{
+	background-color: rgba(133,197,186,0.9);
+}
 
 
 

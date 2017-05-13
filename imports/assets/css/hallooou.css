@@ -43,7 +43,7 @@ Version: 1.0
     5.2:    About section ("About us")
     5.3:    Services section ("What we do")
     5.4:    Products section ("Why choose us")
-    5.5:    Team section 
+    5.5:    Team section
     5.6:    Portfolio section
     5.7:    Clients section
     5.8:    Contact section
@@ -64,7 +64,7 @@ Version: 1.0
 
 
 
-/* 1:   Pre-loader -  Need more customizations? Visit-> http://github.hubspot.com/pace/docs/welcome/ 
+/* 1:   Pre-loader -  Need more customizations? Visit-> http://github.hubspot.com/pace/docs/welcome/
 /* ---------------------------------------------- */
 
 .pace {
@@ -254,18 +254,18 @@ a:focus {
     box-shadow: none;
 }
 
-blockquote { 
+blockquote {
     display: block;
     font-size: 22px;
-    position: relative; 
+    position: relative;
     padding-left: 90px;
     color: rgba(254,82,76, 1);
     border-color: rgba(254,82,76, 1);
 }
- 
+
 blockquote:before {
     content: "\f10d";
-    font-size: 55px; 
+    font-size: 55px;
     font-family: FontAwesome;
     position: absolute;
     top: -4px;
@@ -305,7 +305,7 @@ blockquote span{
     font-weight: 600;
     font-size: 25px;
     padding: 0;
-    margin: 0;
+    margin: auto;
 }
 
 .navbar-custom .navbar-brand span.brand-logo{
@@ -423,7 +423,7 @@ blockquote span{
 /* The overlay */
 .overlay {
     position: fixed;
-    display: block; 
+    display: block;
     background: rgba(254,82,76, 1); /* Primary color, can be changed via colors.css */
     top: 0;
     border: 0;
@@ -546,7 +546,7 @@ blockquote span{
     padding: 0;
     margin: 10px 0;
     color: #fff;
-} 
+}
 
 .carousel-caption .intro-text{
     padding: 0;
@@ -812,7 +812,7 @@ video {
     color:#fff;
             transform: translate(0,-5px);
      -webkit-transform: translate(0,-5px);
-          -o-transform: translate(0,-5px); 
+          -o-transform: translate(0,-5px);
         -moz-transform: translate(0,-5px);
      -webkit-transition: all .3s ease-in-out;
         -moz-transition: all .3s ease-in-out;
@@ -823,7 +823,7 @@ video {
     color:#fff;
             transform: translate(0,-10px);
      -webkit-transform: translate(0,-10px);
-          -o-transform: translate(0,-10px); 
+          -o-transform: translate(0,-10px);
         -moz-transform: translate(0,-10px);
      -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;
@@ -834,7 +834,7 @@ video {
     color:#fff;
             transform: translate(0,-5px);
      -webkit-transform: translate(0,-5px);
-          -o-transform: translate(0,-5px); 
+          -o-transform: translate(0,-5px);
         -moz-transform: translate(0,-5px);
      -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;
@@ -867,7 +867,7 @@ video {
 }
 
 .products-container span.icon{
-    display: inline-block;  
+    display: inline-block;
     padding: 18px;
     margin: 0 0 22px 0;
     min-width: 80px;
@@ -1040,7 +1040,7 @@ video {
 }
 ul.project-meta {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 ul.project-meta li{
@@ -1271,7 +1271,7 @@ ul.project-meta{
 
 .contact-form .form-group input[type="email"],
 .contact-form .form-group input[type="phone"],
-.contact-form .form-group input[type="text"] 
+.contact-form .form-group input[type="text"]
 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1607,7 +1607,7 @@ footer .social a{
 
 /* Hero unit mouse animation */
 
-@-webkit-keyframes rotateplane { 
+@-webkit-keyframes rotateplane {
     0% {
         -webkit-transform: translateY(-2px)
     }
@@ -1617,7 +1617,7 @@ footer .social a{
     }
 }
 
-@keyframes rotateplane { 
+@keyframes rotateplane {
     0% {
         transform: translateY(-2px);
         -webkit-transform: translateY(-2px);
@@ -1719,13 +1719,13 @@ footer .social a{
     border: 2px solid #fff;
     border-radius: 50%;
     width: 60px;
-    height: 60px; 
+    height: 60px;
 }
 
 .squared {
     padding: 10px;
     width: 60px;
-    height: 60px; 
+    height: 60px;
 }
 
 
@@ -1810,7 +1810,7 @@ footer .social a{
     .carousel-caption {
         top: 30%;
         margin: 0;
-   
+
     }
 
     .carousel-caption h1 {
@@ -1863,7 +1863,7 @@ footer .social a{
         bottom: 4%;
         right: 3%;
     }
-    
+
     .scroll-top a:link,
     .scroll-top a:visited {
         padding:2px 6px;
@@ -1965,4 +1965,3 @@ body {
 .debug{
     border:1px solid #f00;
 }
-

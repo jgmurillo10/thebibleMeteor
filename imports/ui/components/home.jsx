@@ -58,7 +58,7 @@ Nota: evite cargar archivos confidenciales. Estos archivos se almacenan en Amazo
           </section>
 
 
-          <section id="services" className="services content-section">
+          <section classID="services" id="services" className="services content-section">
               <div className="container">
                   <div className="row text-center">
                       <div className="col-md-12">

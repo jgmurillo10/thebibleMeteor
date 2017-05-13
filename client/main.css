@@ -94,7 +94,7 @@ h1,h2,h3,h4,h5,h6{
 
  .navbar{
    color: black;
-   background-color: #4db6ac;
+
  }
 
 .link-1 {
@@ -112,9 +112,6 @@ h1,h2,h3,h4,h5,h6{
   border-top: 4px solid #ffffff;
   border-bottom: 4px solid #ffffff;
   padding: 6px 0;
-}
-.navbar .navbar-brand {
-  vertical-align: middle;
 }
 .modal-content{
   background-color: white;
@@ -141,17 +138,12 @@ h1,h2,h3,h4,h5,h6{
 .card-app{
   background-color: white;
 }
-.background-lib{
-  background:
-    url(./data/biblioteca.jpg) bottom center no-repeat,
-}
 .nav.navbar-nav.navbar-right li a {
     color: black;
 }
 .nav.navbar-nav li a {
     color: black;
 }
-
 .navbar-default .navbar-brand {
     color: black;
     vertical-align: middle !important;
@@ -160,11 +152,6 @@ h1,h2,h3,h4,h5,h6{
 .black{
   color: black;
 }
-.middle{
-  vertical-align: middle;
-}
-
-
 
 /*scroll for cards content*/
 .card-title{
@@ -179,9 +166,7 @@ h1,h2,h3,h4,h5,h6{
 .home{
   color:black;
 }
-/*navbar font size for responsive*/
-navbar-title{
-  /*font-size: */
+.app-container{
+  margin-top: 5.5em;
 }
-
 /*video style*/

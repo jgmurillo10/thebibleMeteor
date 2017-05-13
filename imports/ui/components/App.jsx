@@ -18,7 +18,7 @@ class App extends Component {
             </div>
 
           </div>
-        <div className='row'>
+        <div className='row app-container'>
           <div className='col-md-1'>
           </div>
           <div className='col-md-10'>
