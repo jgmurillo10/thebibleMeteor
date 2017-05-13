@@ -24,24 +24,24 @@ class Courses extends Component {
         return (
             <div className="container-fluid">
 
-              <h1>Courses</h1>
+              <h1>Materias</h1>
               <hr />
 
               <div className="row">
                 <div className="col-sm-12">
                   <ol className="breadcrumb">
                     <li>
-                      <Link className="" to={'/programs' }>Programs</Link>
+                      <Link className="" to={'/programs' }>Programas</Link>
                     </li>
                     <li className="active">
-                      Courses
+                      Materias
                     </li>
                   </ol>
                 </div>
               </div>
 
                <Link className="btn" to={'/programs/' + this.props.params.programId + '/addCourse' }>
-                 <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Add Course</h3></span>
+                 <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Agregar Materia</h3></span>
 
               </Link>
 

@@ -17,7 +17,7 @@ class Course extends Component {
           <div className="text-center">
           <div className=" btn-group">
           <a href={this.props.course.url} target="_blank" className="btn btn-info cardbtn" aria-label="Course's webpage"><i className="fa fa-fw fa-globe"></i></a>
-            <Link className="btn btn-app" to={'/programs/' + this.props.course.program_id + '/courses/' +this.props.course._id + '/files' }>See files</Link>
+            <Link className="btn btn-app" to={'/programs/' + this.props.course.program_id + '/courses/' +this.props.course._id + '/files' }>Ver archivos</Link>
 
           </div>
           {/* <button onClick={this.borrarCourse.bind(this)}>Borrar</button> */}

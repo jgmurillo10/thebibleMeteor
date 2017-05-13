@@ -82,14 +82,14 @@ class AddFile extends Component {
   render(){
     return (
       <div className="addPadding">
-            <h1>Add file</h1>
+            <h1>Cargar Archivo</h1>
             <hr />
             <input className="btn btn-default btn-file form-control" type="file" id="file-input"  onChange={this.initUpload.bind(this)}/>
 
             <div className="text-center">
             <div className="btn-group">
-              <button className="btn btn-app " onClick={this.addFile.bind(this)}>Save</button>
-              <Link className="btn btn-info " to={'/programs/' + this.props.params.programId + '/courses/' +this.props.params.courseId + '/files' }>Go Back</Link>
+              <button className="btn btn-app " onClick={this.addFile.bind(this)}>Cargar</button>
+              <Link className="btn btn-info " to={'/programs/' + this.props.params.programId + '/courses/' +this.props.params.courseId + '/files' }>Cancelar</Link>
             </div>
             </div>
 

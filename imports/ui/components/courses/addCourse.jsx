@@ -38,10 +38,10 @@ class AddCourse extends Component {
     render() {
         return (
           <div className="addPadding">
-            <h1>Add Course</h1>
+            <h1>Agregar Materia</h1>
           <form>
           <div className="form-group">
-          <label className="control-label col-sm-2" htmlFor="nombre">Name:</label>
+          <label className="control-label col-sm-2" htmlFor="nombre">Nombre:</label>
             <div className="col-sm-10">
               <input required type="text" placeholder="Programación con tecnologías Web" className="form-control" value={this.state.value} onChange={(event) => {
                   this.setState({name: event.target.value})
@@ -49,7 +49,7 @@ class AddCourse extends Component {
             </div>
           </div>
           <div className="form-group">
-          <label className="control-label col-sm-2" htmlFor="description">Description:</label>
+          <label className="control-label col-sm-2" htmlFor="description">Descripción:</label>
             <div className="col-sm-10">
               <input required type="text" placeholder="Excelente materia" className="form-control"  value={this.state.value} onChange={(event) => {
                   this.setState({description: event.target.value})
@@ -57,7 +57,7 @@ class AddCourse extends Component {
             </div>
           </div>
           <div className="form-group">
-          <label className="control-label col-sm-2" htmlFor="url">URL:</label>
+          <label className="control-label col-sm-2" htmlFor="url">URL de la materia:</label>
             <div className="col-sm-10">
               <input required type="text" placeholder="https://johnguerra.co" className="form-control"  value={this.state.value} onChange={(event) => {
                   this.setState({url: event.target.value})
@@ -65,7 +65,7 @@ class AddCourse extends Component {
             </div>
           </div>
           <div className="form-group">
-          <label className="control-label col-sm-2" htmlFor="url">Code:</label>
+          <label className="control-label col-sm-2" htmlFor="url">Código Uniandes:</label>
             <div className="col-sm-10">
               <input required type="text" placeholder="ISIS3710" className="form-control"  value={this.state.value} onChange={(event) => {
                   this.setState({code: event.target.value})
@@ -75,8 +75,8 @@ class AddCourse extends Component {
           <div className="form-group">
              <div className="col-sm-offset-2 col-sm-10">
                <div className="btn-group">
-                  <button className="btn btn-app" onClick={this.addCourse.bind(this)}>Save</button>
-                <Link className="btn btn-info" to={'/programs/' + this.props.params.programId  +'/courses'}>Go Back</Link>
+                  <button className="btn btn-app" onClick={this.addCourse.bind(this)}>Guardar</button>
+                <Link className="btn btn-info" to={'/programs/' + this.props.params.programId  +'/courses'}>Cancelar</Link>
               </div>
             </div>
           </div>

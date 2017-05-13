@@ -10,26 +10,26 @@ class Files extends Component {
   render(){
     return (
       <div className="container-fluid">
-              <h1>Files</h1>
+              <h1>Archivos</h1>
               <hr />
             <div className="row">
                 <div className="col-sm-12">
                   <ol className="breadcrumb">
                     <li>
-                      <Link className="" to={'/programs' }>Programs</Link>
+                      <Link className="" to={'/programs' }>Programas</Link>
                     </li>
                     <li className="">
-                      <Link className="" to={'/programs/' + this.props.params.programId + '/courses'}>Courses</Link>
+                      <Link className="" to={'/programs/' + this.props.params.programId + '/courses'}>Materias</Link>
                     </li>
                     <li className="active">
-                      Files
+                      Archivos
                     </li>
                   </ol>
                 </div>
               </div>
 
             <Link className="btn" to={'/programs/' + this.props.params.programId + '/courses/' +this.props.params.courseId }>
-              <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Add File</h3></span>
+              <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Cargar Archivo</h3></span>
 
             </Link>
 

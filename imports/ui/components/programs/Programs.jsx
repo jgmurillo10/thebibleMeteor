@@ -11,13 +11,13 @@ class Programs extends Component {
         return (
 
             <div className='container-fluid'>
-                <h1>Programs</h1>
+                <h1>Programas</h1>
                 <hr/>
                 <div className='row'>
                     <div className='col-sm-12'>
                         <ol className='breadcrumb'>
                             <li className='active'>
-                                Programs
+                                Programas
                             </li>
 
                         </ol>
@@ -25,7 +25,7 @@ class Programs extends Component {
                 </div>
                 <Link className='btn' to={'/programs/add'}>
 
-                        <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Add Program</h3></span>
+                        <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Agregar Programa</h3></span>
 
                 </Link>
                 <div className='row'>

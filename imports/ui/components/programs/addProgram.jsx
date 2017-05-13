@@ -40,10 +40,10 @@ class AddProgram extends Component{
 render() {
     return (
           <div className="addPadding">
-            <h1>Add Program</h1>
+            <h1>Agregar Programa</h1>
           <div className="form-horizontal">
               <div className="form-group">
-              <label className="control-label col-sm-2" htmlFor="nombre">Name:</label>
+              <label className="control-label col-sm-2" htmlFor="nombre">Nombre:</label>
                 <div className="col-sm-10">
                   <input type="text" placeholder="Ingeniería Eléctrica" className="form-control" value={this.state.value} onChange={(event) => {
                       this.setState({name: event.target.value})
@@ -51,7 +51,7 @@ render() {
                 </div>
               </div>
           <div className="form-group">
-          <label className="control-label col-sm-2" htmlFor="description">Description:</label>
+          <label className="control-label col-sm-2" htmlFor="description">Descripción:</label>
             <div className="col-sm-10">
               <input type="text" placeholder="SNIES: xxx programa de 8 semestres..." className="form-control"  value={this.state.value} onChange={(event) => {
                   this.setState({description: event.target.value})
@@ -59,7 +59,7 @@ render() {
             </div>
           </div>
           <div className="form-group">
-          <label className="control-label col-sm-2" htmlFor="url">URL:</label>
+          <label className="control-label col-sm-2" htmlFor="url">Link del programa:</label>
             <div className="col-sm-10">
               <input type="text" placeholder="https://url.uniandes.edu.co" className="form-control"  value={this.state.value} onChange={(event) => {
                   this.setState({url: event.target.value})
@@ -71,9 +71,9 @@ render() {
                <div className="btn-group">
 
                   <button className="btn btn-app" onClick={this.addProgram.bind(this)}>
-                    Save
+                    Guardar
                   </button>
-                  <Link className="btn btn-info" to={'/programs' }>Go Back</Link>
+                  <Link className="btn btn-info" to={'/programs' }>Cancelar</Link>
               </div>
             </div>
           </div>
