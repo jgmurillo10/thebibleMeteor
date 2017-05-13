@@ -1,5 +1,5 @@
 body{
-  background-color: #E1E2E1 !important;
+  /*background-color: #E1E2E1 !important;*/
   /*background: #E1E2E1 url('./../data/cube-2.png') repeat !important;*/
 
   font-family: 'Roboto', sans-serif;
@@ -18,14 +18,7 @@ h1,h2,h3,h4,h5,h6{
   width: 20rem;
 }*/
 
-.row {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
+
 
 .card {
     border: 1px solid #ddd;
@@ -51,7 +44,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .breadcrumb {
   font-size: 1.2em;
-  background-color: white !important;
+  background-color: grey !important;
 }
 .active{
   color: black !important;
