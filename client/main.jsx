@@ -33,7 +33,7 @@ import '/imports/assets/css/plugins/jquery.mb.YTPlayer.min.css';
 import '/imports/assets/css/font-awesome.min.css';
 
 
-import '/imports/assets/js/bootstrap.min.js';
+//import '/imports/assets/js/bootstrap.min.js';
 
 
 import '/imports/assets/js/plugins/wow.min.js';
