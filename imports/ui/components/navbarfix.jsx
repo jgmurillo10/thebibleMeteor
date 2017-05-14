@@ -53,20 +53,21 @@ class Navbarfix extends Component {
 
               {logged?
                 <ul className="nav navbar-nav">
+                  <li><Link role="button"   data-toggle="collapse" data-target="#navbar"  to={'/programs'}>Programas</Link></li>
                   <li><Link role="button"   data-toggle="collapse" data-target="#navbar"  to={'/upload'}>Cargar archivos</Link></li>
                 </ul>
 
                  :
                  <ul className="nav navbar-nav">
                  <li><a role="button"   data-toggle="collapse" data-target="#navbar"  href="#">Inicio</a></li>
-                 <li><a role="button"   data-toggle="collapse" data-target="#services"  href="#services">Acerca de la aplicación</a></li>
+                 <li><a role="button"   href="#services">Acerca de la aplicación</a></li>
                  </ul>
               }
           {logged?
             <ul className="nav navbar-nav navbar-right">
 
               <li>
-                <a role="button" data-toggle="collapse" data-target="#navbar"  href="#" onClick={() => { this.logout(); }}>  Salir</a>
+                <a role="button" data-toggle="collapse" data-target="#navbar"  href="#" onClick={() => { this.logout(); }}> <i className="fa fa-sign-out"></i>  Cerrar sesión</a>
               </li>
             </ul>
              :
@@ -76,7 +77,7 @@ class Navbarfix extends Component {
                    </li>
 
                    <li>
-                     <Link to={'/login'} role="button"   data-toggle="collapse" data-target="#navbar"  href="#"> Entrar</Link>
+                     <Link to={'/login'} role="button"   data-toggle="collapse" data-target="#navbar"  href="#"> <i className="fa fa-sign-in"></i> Iniciar sesión</Link>
                    </li>
 
              </ul>

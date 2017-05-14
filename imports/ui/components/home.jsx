@@ -35,10 +35,7 @@ class Home extends Component {
                           <h3 className="caption gray">Carga tus archivos desde donde quieras</h3>
                           <p>TheBibleApp es una iniciativa de estudiantes, para estudiantes. Esta aplicación te permite subir apuntes, talleres, solucionarios y demás documentos útiles para la vida universitaria.</p>
 
-                          <blockquote>
-                              Internet facilita la información adecuada, en el momento adecuado, para el propósito adecuado.
-                              <span>Bill Gates</span>
-                          </blockquote>
+
 
                           <h3 className="gray light">Este proyecto es una aplicación web diseñada para almacenar archivos académicos. Los archivos están organizados por programa y curso de la Universidad de los Andes.
 TheBibleApp permite a los usuarios crear o eliminar un Programa de Pregrado, crear un Curso y cargar un archivo de cualquier tipo (pdf, png, zip, etc).
@@ -50,8 +47,14 @@ Nota: evite cargar archivos confidenciales. Estos archivos se almacenan en Amazo
                       <div className="col-md-6 col-xs-12">
 
                           <div className="embed-responsive embed-responsive-16by9">
-                              <iframe src="https://player.vimeo.com/video/132613118?title=0&amp;byline=0&amp;portrait=1" className="embed-responsive-item" frameBorder="0"  allowFullScreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OxAuklB-b88?rel=0" frameborder="0" allowfullscreen></iframe>
+
                           </div>
+                          <hr></hr>
+                          <blockquote>
+                              Internet facilita la información adecuada, en el momento adecuado, para el propósito adecuado.
+                              <span>Bill Gates</span>
+                          </blockquote>
                       </div>
                   </div>
               </div>

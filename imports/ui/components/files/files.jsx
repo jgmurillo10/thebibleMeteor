@@ -30,8 +30,10 @@ class Files extends Component {
 
             <Link className="btn" to={'/programs/' + this.props.params.programId + '/courses/' +this.props.params.courseId }>
               <span id='add'><h3 className="add">  <i className='fa fa-plus fa-2x btn'></i>Cargar Archivo</h3></span>
-
             </Link>
+            <Link className="btn" to={'/programs/' + this.props.params.programId + '/courses' }>
+              <span id='add'><h3 className="add">  <i className='fa fa-mail-reply fa-2x btn'></i>Atrás</h3></span>
+           </Link>
 
             <div className="row">
 

@@ -45,6 +45,9 @@ Meteor.methods({
     });
 
   },
+  'programs.getName'({program_id}){
+     ProgramsMongo.find({_id: program_id}, {name:1, _id:0});
+  },
   'courses.add'({ name, description, url, code, program_id }) {
     new SimpleSchema({
       name: { type: String },

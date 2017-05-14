@@ -103,7 +103,7 @@ render() {
             </div>
             <div className="modal-footer">
               <button onClick={this.goPrograms.bind(this)}  data-dismiss="modal" className="btn btn-info" >Ver programas</button>
-              <button type="button" className="btn btn-default" data-dismiss="modal">Atrás</button>
+              <button type="button" className="btn btn-default" data-dismiss="modal">Reintentar</button>
             </div>
           </div>
         </div>

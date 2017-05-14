@@ -103,7 +103,7 @@ class AddCourse extends Component {
                 </div>
                 <div className="modal-footer">
                   <button onClick={this.goCourses.bind(this)}  data-dismiss="modal" className="btn btn-info" >Ver materias</button>
-                  <button type="button" className="btn btn-default" data-dismiss="modal">Atrás</button>
+                  <button type="button" className="btn btn-default" data-dismiss="modal">Reintentar</button>
                 </div>
               </div>
             </div>
