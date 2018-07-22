@@ -3,10 +3,10 @@ This web application allows the users to storage academic files. In order to use
 
 ## Usage
 
-``bash
+````bash
 git clone https://github.com/jgmurillo10/thebibleMeteor.git
 cd thebibleMeteor
 meteor
-``
+```
 
 * It is required npm and meteor in order to run the project
