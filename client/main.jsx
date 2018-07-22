@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
-import {Router,Route,Link, browserHistory, IndexRoute} from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import Home from '../imports/ui/components/home.jsx';
 import Programs from '../imports/ui/components/programs/Programs.jsx';
@@ -14,8 +14,6 @@ import LoginPage from '../imports/ui/components/auth/LoginPage';
 import SignupPage from '../imports/ui/components/auth/SignupPage';
 import AddFullFile from '../imports/ui/components/files/addFullFile';
 import App from '../imports/ui/components/App.jsx';
-
-
 
 import './main.css';
 import '/imports/assets/js/jquery.min.js';
@@ -33,7 +31,7 @@ import '/imports/assets/css/plugins/jquery.mb.YTPlayer.min.css';
 import '/imports/assets/css/font-awesome.min.css';
 
 
-//import '/imports/assets/js/bootstrap.min.js';
+// import '/imports/assets/js/bootstrap.min.js';
 
 
 import '/imports/assets/js/plugins/wow.min.js';
@@ -55,8 +53,8 @@ Meteor.startup(() => {
 
 
   render(
-    <Router history={ browserHistory } >
-    <Route path='/' component={ App }>
+    <Router history={browserHistory} >
+      <Route path='/' component={App}>
       <IndexRoute component={ Home }/>
       {/* <Route path='intro' component={Intro}/> */}
       <Route path="login" component={ LoginPage }/>
