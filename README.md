@@ -3,7 +3,7 @@ This web application allows the users to storage academic files. In order to use
 
 ## Usage
 
-``sh
+``bash
 git clone https://github.com/jgmurillo10/thebibleMeteor.git
 cd thebibleMeteor
 meteor
