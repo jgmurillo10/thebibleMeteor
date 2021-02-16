@@ -4,7 +4,8 @@ import Programs from "./programs/Programs";
 import {Meteor} from "meteor/meteor";
 import Navbarfix from './navbarfix.jsx';
 const ROOT_URL = "https://thebibleapp.herokuapp.com/api";
-
+/*Seria bueno hacer uso del estado cuando esta logeado el usuario para cambiar los botones que aparezcan en el navbar, dado que 
+si el usuario inicia sesion puede oprimir el boton de login, asi como si no lo esta, puede intentar oprimir logout.*/
 class App extends Component {
 
 
